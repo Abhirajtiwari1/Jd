@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>Blogs</title>
+    <style>
+        * {
+            font-family: 'Inter', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+       
+        header {
+            background-color: #F2F2F2;
+            padding: 30px 50px;
+        }
+        .navbar-container {
+            width: 100%;
+            height: 71px;
+            position: relative;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        nav img {
+            width: 129px;
+            height: 144px;
+            position: absolute;
+            left: 20px;
+        }
+        nav div {
+            display: flex;
+            gap: 100px;
+            margin: auto;
+        }
+        nav a {
+            text-decoration: none;
+            color: #164B67;
+            font-size: 16px;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #14A0D2;
+            z-index: 1;
+            border-radius: 12px;
+            width: 217px;
+            height: 300px;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 12px;
+            text-decoration: none;
+            display: block;
+            font-family: Inter;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19.36px;
+            text-align: left;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        #blog {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            justify-content: center; /* Center the cards horizontally */
+        }
+        .card {
+            width: 500px; /* Adjusted width for better alignment */
+            height: 650px;/* Adjusted height for better alignment */
+            border-radius: 35px;
+            background-color: #14A0D2;
+            overflow: hidden; /* Ensure content doesn't overflow */
+            padding: 20px; /* Add padding inside the card */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        } 
+        .card img {
+            width: 400px; /* Adjusted width for better alignment */
+            height: 200px; /* Set a fixed height for images */
+            border-radius: 35px;  
+            margin-top: 25px; 
+        }
+        .card-content {
+            flex: 1;
+            overflow-y: auto;
+            width: 100%; 
+            
+        }
+        .card p, .card h1, .card a { 
+            margin-top: 20px;
+            margin-bottom: 20px; /* Add margin between elements */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar-container">
+            <nav>
+                <img src="logo.jpeg" alt="Logo">
+                <div>
+                    <div class="dropdown">
+                        <a href="#">About Us</a>
+                        <div class="dropdown-content" style="height: 400px;">
+                            <a href="#">Our Purpose</a>
+                            <hr style="width: 75px; margin-left: 10px;">
+                            <a href="#">Our Values</a>
+                            <hr style="width: 75px; margin-left: 10px;">
+                            <a href="#">What we do</a>
+                            <hr style="width: 75px; margin-left: 10px;">
+                            <a href="#">Why Choose us?</a>
+                            <hr style="width: 100px; margin-left: 10px;">
+                            <a href="#">Contract Manufacturing</a>
+                            <hr style="width: 100px; margin-left: 10px;">
+                            <a href="#">Board of Director</a>
+                            <hr style="width: 100px; margin-left: 10px;">
+                            <a href="#">Join Our Team</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="#">Our Services</a>
+                        <div class="dropdown-content">
+                            <a href="#">Residential Real Estate</a>
+                            <hr style="width: 75px; margin-left: 10px;">
+                            <a href="#">Our Values</a>
+                            <hr style="width: 75px; margin-left: 10px;">
+                            <a href="#">Commercial Real Estate</a>
+                            <hr style="width: 75px; margin-left: 10px;">
+                            <a href="#">Real Estate Development</a>
+                            <hr style="width: 100px; margin-left: 10px;">
+                            <a href="#">Consulting Services</a>
+                        </div>
+                    </div>
+                    <a href="#">Blogs</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section id="blog">
+        <div class="card">
+            <img src="spice1.png" alt="Blog 1"> 
+            <div class="card-content">
+                <p style="font-family: Inter;font-size: 24px;font-weight: 300;line-height: 29.05px;text-align: left; margin-left: 10px;">Uncategorized <br> / November 19, 2021</p> 
+                <h1 style="font-family: Inter;
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 29.05px;
+                text-align: left;
+                color: #164965;
+                ">Cooking with Carom Seeds: How to Use Ajwain in Cooking</h1> 
+                <p style="font-family: Inter;
+                font-size: 24px;
+                font-weight: 300;
+                line-height: 29.05px;
+                text-align: left;
+                color: #46413C;
+                ">A small oval and pear shaped seeds from the Trachyspermum copticum plant referred as the Carom seeds or Ajwain seeds. [...]</p>
+                <a href="#" style="font-family: Inter;
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 29.05px;
+                text-align: left;
+                color: #164965;
+                ">Read More</a>
+            </div>
+        </div> 
+        <div class="card">
+            <img src="spice2.png" alt="Blog 2">
+            <div class="card-content">
+                <p style="font-family: Inter;
+                font-size: 24px;
+                font-weight: 300;
+                line-height: 29.05px;
+                text-align: left; 
+                margin-left: 10px;
+            
+                ">Uncategorized <br> / November 19, 2021</p> 
+                <h1 style="font-family: Inter;
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 29.05px;
+                text-align: left;
+                color: #164965;
+                ">Learn the Medical Benefits of Ajwain Seeds Hidden</h1> 
+                <p style="font-family: Inter;
+                font-size: 24px;
+                font-weight: 300;
+                line-height: 29.05px;
+                text-align: left;
+                color: #46413C;
+                ">Medical Benefits of Ajwain Seeds The Ajwain seeds or carom seeds featured like a small oval shaped seeds with an aromatic flavour and warm taste.   [...]</p>
+                <a href="#" style="font-family: Inter;
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 29.05px;
+                text-align: left;
+                color: #164965;
+                ">Read More</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="spice3.png" alt="Blog 3">
+            <div class="card-content">
+                <p style="font-family: Inter;
+                font-size: 24px;
+                font-weight: 300;
+                line-height: 29.05px;
+                text-align: left; 
+                margin-left: 10px;
+                ">Uncategorized <br> / November 19, 2021</p> 
+                <h1 style="font-family: Inter;
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 29.05px;
+                text-align: left;
+                color: #164965;
+                ">Learning the Differences Between Cassia and Cinnamon: A Summary of Spice Selection</h1> 
+                <p style="font-family: Inter;
+                font-size: 24px;
+                font-weight: 300;
+                line-height: 29.05px;
+                text-align: left;
+                color: #46413C;
+                ">What Is Cinnamon? Cinnamon is a most commonly used spice with warm and sweet flavour, that is used both in sweet and savoury dishes..  [...]</p>
+                <a href="#" style="font-family: Inter;
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 29.05px;
+                text-align: left;
+                color: #164965;
+                ">Read More</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
