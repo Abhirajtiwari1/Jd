@@ -6,12 +6,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <title>Slide2</title>
+    <title>Spices</title>
     <style>
         body {
             margin: 0;
             font-family: 'Inter', Courier, monospace;
-        }
+            overflow-x: hidden;
+        } 
         header {
             background-color: #F2F2F2;
             padding: 30px 50px;
@@ -45,6 +46,33 @@
             color: #164B67;
             font-size: 16px;
         }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #14A0D2;
+            z-index: 1;
+            border-radius: 12px;
+            width: 217px;
+            height: 300px;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 12px;
+            text-decoration: none;
+            display: block;
+            font-family: Inter;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19.36px;
+            text-align: left;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
         #About div {
             width: 100%;
             height: auto;
@@ -56,6 +84,28 @@
         #About img {
             max-width: 100%;
             height: auto;
+        } 
+        #About1{
+            text-align: center; 
+            font-family: Inter; 
+            font-size: 24px; 
+            font-weight: 400; 
+            line-height: 29.21px;
+        }
+        #About2{
+            font-family: Inter; 
+            font-size: 24px; 
+            font-weight: 400; 
+            line-height: 29.21px;
+            text-align: center;
+        } 
+        #Why{
+            font-family: Inter; 
+            font-size: 48px; 
+            font-weight: 400; 
+            line-height: 58.42px; 
+            text-align: center; 
+            color: #14A0D2;
         }
         .why-choose-us {
             display: flex;
@@ -121,66 +171,189 @@
         }
         .dropdown:hover .dropdown-content {
             display: block;
-        }
+        } 
+#spice1{
+    width: 100%; 
+    height: auto; 
+    top: 179px; 
+    gap: 0px; 
+    opacity: 0px;
+} 
+#spice5{
+    border-radius: 10px;
+} 
+#cumin{
+    font-family: Inter;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 48.68px;
+    text-align: center; 
+    color: #164965;
+}
+#insta{
+    font-family: Inter;
+    font-size: 48px;
+    font-weight: 200;
+    line-height: 58.42px;
+    text-align: center; 
+    color: #164B67;
+}
+nav .menu-icon {
+    display: none; /* Hide menu icon on desktop */
+    font-size: 24px; /* Icon size */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+        
+     /* Media Query for Mobile Devices */
+     @media (max-width: 768px) {
+    /* Navbar styles */
+    nav {
+        justify-content: space-between; /* Maintain space between items */
+    }
+
+    nav .menu-icon {
+        display: block; /* Show menu icon on mobile */
+        position: absolute; /* Absolute positioning for the icon */
+        right: 20px; /* Position on the right */
+        top: 20px; /* Center vertically */
+    }
+
+    nav .nav-links {
+        display: none; /* Hide nav links by default */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute; /* Position links absolutely */
+        top: 71px; /* Position below navbar */
+        left: 0; /* Align to left */
+        right: 0; /* Stretch to the right */
+        background-color: #F2F2F2; /* Match background color */
+        padding: 10px 0; /* Add padding */
+        z-index: 1; /* Ensure it appears above other elements */
+        align-items: center; /* Center items horizontally */
+        gap: 5px; /* Reduced space between links */
+    }
+
+    nav .nav-links.active {
+        display: flex; /* Show nav links when active */
+        justify-content: center; /* Center items when displayed */
+    }
+
+    nav a {
+        font-size: 14px; /* Adjust font size for mobile */
+        margin-bottom: 5px; /* Space between links */
+    } 
+    #About img{
+        margin-left: 40px;
+    } 
+    #About1{
+        font-size: 15px;
+        line-height: 15px;
+    
+        margin-left: 50px;
+     } 
+    #About2{
+        font-size: 14px;
+        line-height: 15px;
+        margin-left: 50px;
+        text-align: center;
+
+    } 
+    #Why{
+        font-size: 30px;
+        line-height: 30px;
+        margin-left: 50px;
+        margin-top: 50px;
+       
+    } 
+    .why-choose-us {
+        flex-direction: column; /* Stack items vertically in portrait mode */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .why-choose-us img {
+        width: 100%; /* Take full width in mobile view */
+        border-radius: 10px; /* Adjust border radius for a card look */
+    }
+
+    .why-choose-us .text-content {
+        width: 100%; /* Take full width in mobile view */
+        padding: 10px; /* Reduce padding for mobile */
+    }
+
+    .why-choose-us .text-content p {
+        font-size: 14px; /* Slightly smaller font size for better readability on mobile */
+    } 
+    #spice5{
+        margin-right: 45px;
+    } 
+    #cumin{
+        font-size: 20px;
+    } 
+    #insta{
+        font-size: 30px;
+        line-height: 45px;
+    }
+}
+
     </style>
 </head>
 <body>
-<header>
-    <div class="navbar-container">
-        <nav>
-            <img src="logo.jpeg" alt="Logo">
-            <div> 
-                <div class="dropdown">
-                    <a href="#">About Us</a>
-                    <div class="dropdown-content" style="height: 400px;">
-                        <a href="#">Our Purpose</a> 
-                        <hr style="width: 75px; margin-left: 10px;">
-                        <a href="#">Our Values</a>
-                        <hr style="width: 75px; margin-left: 10px;">
-                        <a href="#">What we do</a>
-                        <hr style="width: 75px; margin-left: 10px;">
-                        <a href="#">Why Choose us?</a>
-                        <hr style="width: 100px; margin-left: 10px;">
-                        <a href="#">Contract Manufacturing</a> 
-                        <hr style="width: 100px; margin-left: 10px;">
-                        <a href="#">Board of Director</a> 
-                        <hr style="width: 100px; margin-left: 10px;">
-                        <a href="#">Join Our Team</a> 
+    <header style="width: 100%;">
+        <div class="navbar-container">
+            <nav>
+                <img src="logo.jpeg" alt="Logo">
+                <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger menu icon -->
+                <div class="nav-links" id="navLinks" style="border-radius: 10px;
+                ;"> <!-- Container for nav links -->
+                    <div class="dropdown">
+                        <a href="#">About Us</a>
+                        <div class="dropdown-content" style="height: 400px;">
+                            <a href="#">Our Purpose</a>
+                            <hr style="width: 75px; margin-left: 10px;">
+                            <a href="#">Our Values</a>
+                            <hr style="width: 75px; margin-left: 10px;">
+                            <a href="#">What we do</a>
+                            <hr style="width: 75px; margin-left: 10px;">
+                            <a href="#">Why Choose us?</a>
+                            <hr style="width: 100px; margin-left: 10px;">
+                            <a href="#">Contract Manufacturing</a>
+                            <hr style="width: 100px; margin-left: 10px;">
+                            <a href="#">Board of Director</a>
+                            <hr style="width: 100px; margin-left: 10px;">
+                            <a href="#">Join Our Team</a>
+                        </div>
                     </div>
-                </div>
-                <div class="dropdown">
-                    <a href="#">Our Services</a>
-                    <div class="dropdown-content">
-                        <a href="#">Residential Real Estate</a> 
-                        <hr style="width: 75px; margin-left: 10px;">
-                        <a href="#">Our Values</a>
-                        <hr style="width: 75px; margin-left: 10px;">
-                        <a href="#">Commercial Real Estate</a>
-                        <hr style="width: 75px; margin-left: 10px;">
-                        <a href="#">Real Estate Development</a>
-                        <hr style="width: 100px; margin-left: 10px;">
-                        <a href="#">Consulting Services</a> 
+                    <div class="dropdown">
+                        <a href="#">Our Services</a>
+                        <div class="dropdown-content">
+                            <a href="#">Residential Real Estate</a>
+                            <hr style="width: 75px; margin-left: 10px;">
+                            <a href="#">Our Values</a>
+                            <hr style="width: 75px; margin-left: 10px;">
+                            <a href="#">Commercial Real Estate</a>
+                            <hr style="width: 75px; margin-left: 10px;">
+                            <a href="#">Real Estate Development</a>
+                            <hr style="width: 100px; margin-left: 10px;">
+                            <a href="#">Consulting Services</a>
+                        </div>
                     </div>
+                    <a href="#">Blogs</a>
+                    <a href="#">Contact Us</a>
                 </div>
-                <a href="#">Blogs</a>
-                <a href="#">Contact Us</a>
-            </div>
-        </nav>
-    </div> 
-</header>
+            </nav>
+        </div>
+    </header> 
 <section id="About">
     <div style="margin-top: 10px;">
-        <img src="spice4.jpeg" alt="Slide Image" style="width: 1471px; height: 652px; top: 179px; gap: 0px; opacity: 0px;"> 
+        <img src="spice4.jpeg" alt="Slide Image" id="spice1"> 
     </div>
-    <p style="text-align: center; font-family: Inter; font-size: 24px; font-weight: 400; line-height: 29.21px;">
+    <p id="About1">
         JD Internationals stands at the intersection of real estate innovation and culinary excellence. As a versatile leader in <br> both sectors, we pride ourselves on our ability to deliver exceptional value and quality. Our real estate division <br> specializes in creating and managing high-impact residential, commercial, and industrial properties, driven by a <br>  commitment to excellence and client satisfaction. </p> 
-    <p style="text-align: center; font-family: Inter; font-size: 24px; font-weight: 400; line-height: 29.21px;margin-top: 10px;">Simultaneously, our spices division offers a rich array of premium, sustainably sourced spices and blends that elevate <br> culinary experiences around the world. Whether you're seeking a transformative property or a distinctive flavor, JD <br> Internationals is dedicated to exceeding expectations and enhancing lives through our diverse portfolio.
+    <p id="About2">Simultaneously, our spices division offers a rich array of premium, sustainably sourced spices and blends that elevate <br> culinary experiences around the world. Whether you're seeking a transformative property or a distinctive flavor, JD <br> Internationals is dedicated to exceeding expectations and enhancing lives through our diverse portfolio.
     </p> 
-    <h1 style="font-family: Inter; font-size: 48px; font-weight: 400; line-height: 58.42px; text-align: center; color: #14A0D2;">
-        WHY CHOOSE US ?
-    </h1>
+    <h1 id="Why">WHY CHOOSE US ?</h1>
     <div class="why-choose-us">
-        <img src="spice5.png" alt="Image 1" style="border-radius: 10px;">
+        <img src="spice5.png" alt="Image 1"  id="spice5">
         <div class="text-content">
             <p style="font-family: Inter;
             font-size: 30px;
@@ -192,23 +365,11 @@
             </p>
         </div>
     </div> 
-    <h1 style="font-family: Inter;
-    font-size: 60px;
-    font-weight: 400;
-    line-height: 48.68px;
-    text-align: center; 
-    color: #164965;
-    ">WE ARE CUMIN MANUFACTURER</h1>   
+    <h1 id="cumin">WE ARE CUMIN MANUFACTURER</h1>   
     <div class="img" style="margin-bottom: 50px; margin-top: 1px;">
         <img src="cumin.png" alt="Image">
     </div>
-    <h1 style="font-family: Inter;
-    font-size: 48px;
-    font-weight: 200;
-    line-height: 58.42px;
-    text-align: center; 
-    color: #164B67;
-    ">STAY IN TOUCH ON INSTAGRAM </h1> 
+    <h1  id="insta">STAY IN TOUCH ON INSTAGRAM </h1> 
     <div style="background-color: #B4DCEA; width: 100%; height: auto; gap: 0px; opacity: 0px;">
         <div class="grid-container" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
             <img src="insta1.jpeg" alt="Image 1">
@@ -220,5 +381,12 @@
         </div>
     </div>
 </section>   
-</body>
+</body> 
+<script>
+    function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('active'); // Toggle active class to show/hide links
+}
+
+</script>
 </html>
