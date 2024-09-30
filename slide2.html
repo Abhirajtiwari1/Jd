@@ -11,6 +11,7 @@
         body {
             margin: 0;
             font-family: 'Inter', Courier, monospace;
+            overflow-x: hidden;
         }
         header {
             background-color: #F2F2F2;
@@ -53,7 +54,16 @@
             align-items: center;
             opacity: 1;
         }
-        #About img {
+        #aboutUs{
+            width: 100%;
+            height: auto;
+            
+            height: 652px; 
+            top: 179px; 
+            gap: 0px; 
+            opacity: 0px;
+        } 
+        #location{
             max-width: 100%;
             height: auto;
         }
@@ -93,7 +103,22 @@ top: 2941px;
 left: 38px;
 gap: 0px;
 opacity: 0px;
-        }
+        } 
+.instagram-title{
+    font-family: Inter;
+    font-size: 48px;
+    font-weight: 200;
+    line-height: 58.42px;
+    text-align: center; 
+    color: #164B67;
+}  
+.instagram-section{
+    background-color: #B4DCEA; 
+    width: 100%; 
+    height: auto; 
+    gap: 0px; 
+    opacity: 0px;
+}     
     .dropdown {
         position: relative;
         display: inline-block;
@@ -129,67 +154,164 @@ text-align: left;
     .dropdown:hover .dropdown-content {
         display: block;
     }
+    nav .menu-icon {
+    display: none; /* Hide menu icon on desktop */
+    font-size: 24px; /* Icon size */
+    cursor: pointer; /* Pointer cursor on hover */
+} 
+#intro{
+    text-align: center; 
+    font-family: Inter; 
+    font-size: 24px; 
+    font-weight: 400; 
+    line-height: 29.21px;
+}
+#Choose{
+    font-family: Inter; 
+    font-size: 48px; 
+    font-weight: 400; 
+    line-height: 58.42px; 
+    text-align: center; 
+    color: #14A0D2;
+}
+#tagline{
+    font-family: Inter; 
+        font-size: 40px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 48.68px;
+        text-align: center;
+        color: #164965; 
+}
 
+/* Media Query for Mobile Devices */
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    nav {
+        justify-content: space-between; /* Maintain space between items */
+    }
+
+    nav .menu-icon {
+        display: block; /* Show menu icon on mobile */
+        position: absolute; /* Absolute positioning for the icon */
+        right: 20px; /* Position on the right */
+        top: 20px; /* Center vertically */
+    }
+
+    nav .nav-links {
+        display: none; /* Hide nav links by default */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute; /* Position links absolutely */
+        top: 71px; /* Position below navbar */
+        left: 0; /* Align to left */
+        right: 0; /* Stretch to the right */
+        background-color: #F2F2F2; /* Match background color */
+        padding: 10px 0; /* Add padding */
+        z-index: 1; /* Ensure it appears above other elements */
+        align-items: center; /* Center items horizontally */
+        gap: 5px; /* Reduced space between links */
+    }
+
+    nav .nav-links.active {
+        display: flex; /* Show nav links when active */
+        justify-content: center; /* Center items when displayed */
+    }
+
+    nav a {
+        font-size: 14px; /* Adjust font size for mobile */
+        margin-bottom: 5px; /* Space between links */
+    } 
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* Change to 2 columns on small screens */
+    }
+    
+    .grid-container img {
+        width: 100%; /* Ensure images scale properly */
+        height: auto; /* Maintain aspect ratio */
+    } 
+    .instagram-title{
+        font-size: 30px;
+        line-height: 35px;
+    } 
+    #intro{
+        font-size: 20px;
+        line-height: 25px;
+    } 
+    #Choose{
+        font-size: 25px;
+        line-height: 30px;
+    }
+    #tagline{
+      
+        font-size: 20px;
+     text-align: center;
+      
+        line-height: 30px;
+       
      
+    }
+}
+
+
+
+
     </style>
 </head>
 <body>
-<header>
-    <div class="navbar-container">
-        <nav>
-            <img src="logo.jpeg" alt="Logo">
-            <div> 
-                <div class="dropdown">
-                <a href="#">About Us</a>
-                <div class="dropdown-content" style="height: 400px;">
-                    <a href="#">Our Purpose</a> 
-                    <hr style="width: 75px; margin-left: 10px;">
-                    <a href="#">Our Values</a>
-                    <hr style="width: 75px; margin-left: 10px;">
-                    <a href="#">What we do</a>
-                    <hr style="width: 75px; margin-left: 10px;">
-                    <a href="#">Why Choose us?</a>
-                    <hr style="width: 100px; margin-left: 10px;">
-                   <a href="#">Contract Manufacturing</a> 
-                   <hr style="width: 100px; margin-left: 10px;">
-                   <a href="#">Board of Director</a> 
-                   <hr style="width: 100px; margin-left: 10px;">
-                   <a href="#">Join Our Team</a> 
-              
-                </div>
-                </div>
-                <div class="dropdown">
-                    <a href="#">Our Services</a>
-                    <div class="dropdown-content">
-                        <a href="#">Residential Real Estate</a> 
-                        <hr style="width: 75px; margin-left: 10px;">
-                        <a href="#">Our Values</a>
-                        <hr style="width: 75px; margin-left: 10px;">
-                        <a href="#">Commercial Real Estate</a>
-                        <hr style="width: 75px; margin-left: 10px;">
-                        <a href="#">Real Estate Development</a>
-                        <hr style="width: 100px; margin-left: 10px;">
-                       <a href="#">Consulting Services</a> 
-                  
-                     
-                        
-
+    <header>
+        <div class="navbar-container">
+            <nav>
+                <img src="logo.jpeg" alt="Logo">
+                <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger menu icon -->
+                <div class="nav-links" id="navLinks" style="border-radius: 10px;
+                ;"> <!-- Container for nav links -->
+                    <div class="dropdown">
+                        <a href="#">About Us</a>
+                        <div class="dropdown-content" style="height: 400px;">
+                            <a href="#">Our Purpose</a>
+                            <hr style="width: 75px; margin-left: 10px;">
+                            <a href="#">Our Values</a>
+                            <hr style="width: 75px; margin-left: 10px;">
+                            <a href="#">What we do</a>
+                            <hr style="width: 75px; margin-left: 10px;">
+                            <a href="#">Why Choose us?</a>
+                            <hr style="width: 100px; margin-left: 10px;">
+                            <a href="#">Contract Manufacturing</a>
+                            <hr style="width: 100px; margin-left: 10px;">
+                            <a href="#">Board of Director</a>
+                            <hr style="width: 100px; margin-left: 10px;">
+                            <a href="#">Join Our Team</a>
+                        </div>
                     </div>
+                    <div class="dropdown">
+                        <a href="#">Our Services</a>
+                        <div class="dropdown-content">
+                            <a href="#">Residential Real Estate</a>
+                            <hr style="width: 75px; margin-left: 10px;">
+                            <a href="#">Our Values</a>
+                            <hr style="width: 75px; margin-left: 10px;">
+                            <a href="#">Commercial Real Estate</a>
+                            <hr style="width: 75px; margin-left: 10px;">
+                            <a href="#">Real Estate Development</a>
+                            <hr style="width: 100px; margin-left: 10px;">
+                            <a href="#">Consulting Services</a>
+                        </div>
+                    </div>
+                    <a href="#">Blogs</a>
+                    <a href="#">Contact Us</a>
                 </div>
-                <a href="#">Blogs</a>
-                <a href="#">Contact Us</a>
-            </div>
-        </nav>
-    </div> 
-</header>
+            </nav>
+        </div>
+    </header>
+    
 <section id="About">
     <div style="margin-top: 10px;">
-        <img src="slide2.png" alt="Slide Image" style="width: 1471px; height: 652px; top: 179px; gap: 0px; opacity: 0px;"> 
+        <img src="slide2.png" alt="Slide Image" id="aboutUs"> 
     </div>
-    <p style="text-align: center; font-family: Inter; font-size: 24px; font-weight: 400; line-height: 29.21px;">
+    <p id="intro">
         JD Relators is a premier real estate firm dedicated to transforming property transactions into exceptional <br> experiences. With a profound understanding of the real estate market, JD Relators specializes in residential,<br> commercial, and industrial properties, offering tailored solutions to meet the diverse needs of clients. Our <br> team of seasoned professionals combines in-depth market knowledge with personalized service, ensuring <br> every client finds not just a property, but a space that aligns perfectly with their vision and goals. At JD <br> Relators, we believe that every property has a story and a purpose—our mission is to help you find yours.
     </p> 
-    <h1 style="font-family: Inter; font-size: 48px; font-weight: 400; line-height: 58.42px; text-align: center; color: #14A0D2;">
+    <h1 id="Choose">
         WHY CHOOSE US ?
     </h1>
     <div style="background-color: #B4DCEA; width: 100%; height: auto; margin-top: 50px; padding: 20px;">
@@ -202,19 +324,13 @@ text-align: left;
             </div>
         </div>
     </div> 
-        <h1 style="font-family: Inter; font-size: 40px;font-style: italic;font-weight: 700;line-height: 48.68px;text-align: center;color: #164965;"> We Don’t Just Sell Houses,<br>
+        <h1 id="tagline"> We Don’t Just Sell Houses,<br>
             We Match Souls with Spaces</h1>   
     <div class="img">
-        <img src="img.jpeg" alt="Image">
+        <img src="img.jpeg" alt="Image" id="location">
     </div>
-    <h1 style="font-family: Inter;
-    font-size: 48px;
-    font-weight: 200;
-    line-height: 58.42px;
-    text-align: center; 
-    color: #164B67;
-    ">STAY IN TOUCH ON INSTAGRAM </h1> 
-<div style="background-color: #B4DCEA; width: 100%; height: auto; gap: 0px; opacity: 0px;">
+    <h1 class="instagram-title">STAY IN TOUCH ON INSTAGRAM</h1> 
+<div class="instagram-section">
     <div class="grid-container" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
         <img src="insta1.jpeg" alt="Image 1">
         <img src="insta2.jpeg" alt="Image 2">
@@ -226,5 +342,12 @@ text-align: left;
     </div>
 </section>   
 
-</body>
+</body> 
+<script>
+    function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('active'); // Toggle active class to show/hide links
+}
+
+</script>
 </html>
