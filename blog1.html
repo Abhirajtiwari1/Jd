@@ -43,7 +43,7 @@
             gap: 100px;
             margin: auto;
         }
-        nav a {
+        nav a { 
             text-decoration: none;
             color: #164B67;
             font-size: 16px;
@@ -76,30 +76,132 @@
             display: block;
         }
         #blog {
-            display: flex;
-            gap: 20px;
-            padding: 20px;
-            justify-content: center; /* Center the cards horizontally */
-        }
-        .card {
-            width: 500px; /* Adjusted width for better alignment */
-            height: 718px;/* Adjusted height for better alignment */
-            border-radius: 35px;
-            background-color: #14A0D2;
-            overflow: hidden; /* Ensure content doesn't overflow */
-            padding: 20px; /* Add padding inside the card */
-        } 
-        .card img {
-            width: 400px; /* Adjusted width for better alignment */
-            height: auto; /* Maintain aspect ratio */
-            border-radius: 35px;  
-            margin-top: 25px; 
-            margin-left: 25px;
-        }
-        .card p, .card h1, .card a { 
-            margin-top: 50px;
-            margin-bottom: 50px; /* Add margin between elements */
-        }
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center; /* Center the cards horizontally */
+}
+
+.card {
+    width: 500px; /* Adjusted width for better alignment */
+    height: 718px; /* Adjusted height for better alignment */
+    border-radius: 35px;
+    background-color: #14A0D2;
+    overflow: hidden; /* Ensure content doesn't overflow */
+    padding: 20px; /* Add padding inside the card */
+}
+
+.card img {
+    width: 400px; /* Adjusted width for better alignment */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 35px;  
+    margin-top: 25px; 
+    margin-left: 25px;
+}
+
+.card p, .card h1, .card a { 
+    margin-top: 50px;
+    margin-bottom: 50px; /* Add margin between elements */
+    font-family: 'Inter', sans-serif; /* Set font family for consistency */
+    font-size: 24px; /* Set font size for consistency */
+}
+
+.card h1 {
+    font-weight: 700;
+    color: #164965;
+}
+
+.card p {
+    font-weight: 300;
+    color: #46413C;
+}
+
+.card a {
+    font-weight: 700;
+    color: #164965;
+    text-decoration: none; /* Remove underline */
+}
+
+        nav .menu-icon {
+    display: none; /* Hide menu icon on desktop */
+    font-size: 24px; /* Icon size */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+        /* Media Query for Mobile Devices */
+        @media (max-width: 768px) {
+    /* Navbar styles */
+    nav {
+        justify-content: space-between; /* Maintain space between items */
+    }
+
+    nav .menu-icon {
+        display: block; /* Show menu icon on mobile */
+        position: absolute; /* Absolute positioning for the icon */
+        right: 20px; /* Position on the right */
+        top: 20px; /* Center vertically */
+    }
+
+    nav .nav-links {
+        display: none; /* Hide nav links by default */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute; /* Position links absolutely */
+        top: 71px; /* Position below navbar */
+        left: 0; /* Align to left */
+        right: 0; /* Stretch to the right */
+        background-color: #F2F2F2; /* Match background color */
+        padding: 10px 0; /* Add padding */
+        z-index: 1; /* Ensure it appears above other elements */
+        align-items: center; /* Center items horizontally */
+        gap: 5px; /* Reduced space between links */
+    }
+
+    nav .nav-links.active {
+        display: flex; /* Show nav links when active */
+        justify-content: center; /* Center items when displayed */
+    }
+
+    nav a {
+        font-size: 14px; /* Adjust font size for mobile */
+        margin-bottom: 5px; /* Space between links */
+    }
+
+    /* Blog Section Styles */
+    #blog {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center cards horizontally */
+    }
+
+    .card {
+        width: 90%; /* Take up most of the width on smaller screens */
+        height: auto; /* Allow height to adjust based on content */
+        margin-bottom: 20px; /* Space between cards */
+    }
+
+    .card img {
+        width: 100%; /* Make images responsive */
+        margin-left: 0; /* Remove left margin for mobile */
+    }
+
+    .card p, .card h1, .card a {
+        font-size: 20px; /* Reduce font size for better readability */
+        margin-top: 30px; /* Adjust top margin */
+        margin-bottom: 30px; /* Adjust bottom margin */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Additional styles for very small screens */
+    .card {
+        height: auto; /* Ensure cards height is based on content */
+    }
+
+    .card p, .card h1, .card a {
+        font-size: 18px; /* Further reduce font size for small screens */
+        margin-top: 20px; /* Adjust top margin */
+        margin-bottom: 20px; /* Adjust bottom margin */
+    }
+}
+
     </style>
 </head>
 <body>
@@ -107,7 +209,9 @@
         <div class="navbar-container">
             <nav>
                 <img src="logo.jpeg" alt="Logo">
-                <div>
+                <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger menu icon -->
+                <div class="nav-links" id="navLinks" style="border-radius: 10px;
+                ;"> <!-- Container for nav links -->
                     <div class="dropdown">
                         <a href="#">About Us</a>
                         <div class="dropdown-content" style="height: 400px;">
@@ -149,98 +253,33 @@
     <section id="blog">
         <div class="card">
             <img src="blog1.png" alt="Blog 1"> 
-        <p style="font-family: Inter;
-        font-size: 24px;
-        font-weight: 300;
-        line-height: 29.05px;
-        text-align: left; 
-        margin-left: 10px;
-        ">Uncategorized <br> / November 19, 2021</p> 
-        <h1 style="font-family: Inter;
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 29.05px;
-        text-align: left;
-        color: #164965;
-        ">The Advantages Of Buying Real Estate During Its "New-Launch" Phase</h1> 
-        <p style="font-family: Inter;
-        font-size: 24px;
-        font-weight: 300;
-        line-height: 29.05px;
-        text-align: left;
-        color: #46413C;
-        ">Investing in real estate is an important decision that requires careful consideration. [...]</p>
-            <a href="#" style="font-family: Inter;
-            font-size: 24px;
-            font-weight: 700;
-            line-height: 29.05px;
-            text-align: left;
-            color: #164965;
-            ">Read More</a>
+            <p>Uncategorized <br> / November 19, 2021</p> 
+            <h1>The Advantages Of Buying Real Estate During Its "New-Launch" Phase</h1> 
+            <p>Investing in real estate is an important decision that requires careful consideration. [...]</p>
+            <a href="#" style="text-decoration: underline;">Read More</a>
         </div> 
         <div class="card">
             <img src="blog2.png" alt="Blog 2">
-            <p style="font-family: Inter;
-            font-size: 24px;
-            font-weight: 300;
-            line-height: 29.05px;
-            text-align: left; 
-            margin-left: 10px;
-        
-            ">Uncategorized <br> / November 19, 2021</p> 
-            <h1 style="font-family: Inter;
-            font-size: 24px;
-            font-weight: 700;
-            line-height: 29.05px;
-            text-align: left;
-            color: #164965;
-            ">6 Key Strategies to Prepare your Home for the Monsoons</h1> 
-            <p style="font-family: Inter;
-            font-size: 24px;
-            font-weight: 300;
-            line-height: 29.05px;
-            text-align: left;
-            color: #46413C;
-            ">The monsoon season in India offers a welcome break from the intense summer heat, transforming  [...]</p>
-                <a href="#" style="font-family: Inter;
-                font-size: 24px;
-                font-weight: 700;
-                line-height: 29.05px;
-                text-align: left;
-                color: #164965;
-                ">Read More</a>
+            <p>Uncategorized <br> / November 19, 2021</p> 
+            <h1>6 Key Strategies to Prepare your Home for the Monsoons</h1> 
+            <p>The monsoon season in India offers a welcome break from the intense summer heat, transforming [...]</p>
+            <a href="#" style="text-decoration: underline;">Read More</a>
         </div>
         <div class="card">
             <img src="blog3.png" alt="Blog 3">
-            <p style="font-family: Inter;
-            font-size: 24px;
-            font-weight: 300;
-            line-height: 29.05px;
-            text-align: left; 
-            margin-left: 10px;
-            ">Uncategorized <br> / November 19, 2021</p> 
-            <h1 style="font-family: Inter;
-            font-size: 24px;
-            font-weight: 700;
-            line-height: 29.05px;
-            text-align: left;
-            color: #164965;
-            ">Green And Sustainable Living Spaces Are Key For Nurturing Healthy Families</h1> 
-            <p style="font-family: Inter;
-            font-size: 24px;
-            font-weight: 300;
-            line-height: 29.05px;
-            text-align: left;
-            color: #46413C;
-            ">Our homes are safe havens for us and our families.  [...]</p>
-                <a href="#" style="font-family: Inter;
-                font-size: 24px;
-                font-weight: 700;
-                line-height: 29.05px;
-                text-align: left;
-                color: #164965;
-                ">Read More</a>
+            <p>Uncategorized <br> / November 19, 2021</p> 
+            <h1>Green And Sustainable Living Spaces Are Key For Nurturing Healthy Families</h1> 
+            <p>Our homes are safe havens for us and our families. [...]</p>
+            <a href="#" style="text-decoration: underline;">Read More</a>
         </div>
     </section>
-</body>
+    
+</body> 
+<script>
+    function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('active'); // Toggle active class to show/hide links
+}
+
+</script>
 </html>
