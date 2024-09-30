@@ -14,7 +14,12 @@
             padding: 0;
             box-sizing: border-box;
         }
-       
+        nav .menu-icon {
+    display: none; /* Hide menu icon on desktop */
+    font-size: 24px; /* Icon size */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
         header {
             background-color: #F2F2F2;
             padding: 30px 50px;
@@ -108,6 +113,66 @@
             margin-top: 20px;
             margin-bottom: 20px; /* Add margin between elements */
         }
+        @media (max-width: 768px) {
+    /* Navbar styles */
+    nav {
+        justify-content: space-between; /* Maintain space between items */
+    }
+
+    nav .menu-icon {
+        display: block; /* Show menu icon on mobile */
+        position: absolute; /* Absolute positioning for the icon */
+        right: 20px; /* Position on the right */
+        top: 20px; /* Center vertically */
+    }
+
+    nav .nav-links {
+        display: none; /* Hide nav links by default */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute; /* Position links absolutely */
+        top: 71px; /* Position below navbar */
+        left: 0; /* Align to left */
+        right: 0; /* Stretch to the right */
+        background-color: #F2F2F2; /* Match background color */
+        padding: 10px 0; /* Add padding */
+        z-index: 1; /* Ensure it appears above other elements */
+        align-items: center; /* Center items horizontally */
+        gap: 5px; /* Reduced space between links */
+    }
+
+    nav .nav-links.active {
+        display: flex; /* Show nav links when active */
+        justify-content: center; /* Center items when displayed */
+    }
+
+    nav a {
+        font-size: 14px; /* Adjust font size for mobile */
+        margin-bottom: 5px; /* Space between links */
+    }
+
+    /* Blog Section Styles */
+    #blog {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center cards horizontally */
+    }
+
+    .card {
+        width: 90%; /* Take up most of the width on smaller screens */
+        height: auto; /* Allow height to adjust based on content */
+        margin-bottom: 20px; /* Space between cards */
+    }
+
+    .card img {
+        width: 100%; /* Make images responsive */
+        margin-left: 0; /* Remove left margin for mobile */
+    }
+
+    .card p, .card h1, .card a {
+        font-size: 20px; /* Reduce font size for better readability */
+        margin-top: 30px; /* Adjust top margin */
+        margin-bottom: 30px; /* Adjust bottom margin */
+    }
+}
     </style>
 </head>
 <body>
@@ -115,7 +180,9 @@
         <div class="navbar-container">
             <nav>
                 <img src="logo.jpeg" alt="Logo">
-                <div>
+                <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger menu icon -->
+                <div class="nav-links" id="navLinks" style="border-radius: 10px;
+                ;"> <!-- Container for nav links -->
                     <div class="dropdown">
                         <a href="#">About Us</a>
                         <div class="dropdown-content" style="height: 400px;">
@@ -250,5 +317,12 @@
             </div>
         </div>
     </section>
-</body>
+</body> 
+<script>
+     function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('active'); // Toggle active class to show/hide links
+}
+
+</script>
 </html>
