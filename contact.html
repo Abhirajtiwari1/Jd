@@ -6,7 +6,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-  <title>Ingredis</title>
+  <title>Contact Form</title>
 </head> 
 <style>
   /* General Styling */
@@ -169,7 +169,8 @@ text-align: left;
 }
 header {
   background-color: #F2F2F2;
-  padding: 30px 50px;
+  padding: 30px 50px; 
+  width: 100%;
 }
 .navbar-container {
   width: 100%;
@@ -200,36 +201,152 @@ nav a {
   color: #164B67;
   font-size: 16px;
 }
+#get{
+  text-align: center;
+  color: #164B67;
+}
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    nav {
+        justify-content: space-between; /* Maintain space between items */
+    }
+
+    nav .menu-icon {
+        display: block; /* Show menu icon on mobile */
+        position: absolute; /* Absolute positioning for the icon */
+        right: 20px; /* Position on the right */
+        top: 20px; /* Center vertically */
+    }
+
+    nav .nav-links {
+        display: none; /* Hide nav links by default */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute; /* Position links absolutely */
+        top: 71px; /* Position below navbar */
+        left: 0; /* Align to left */
+        right: 0; /* Stretch to the right */
+        background-color: #F2F2F2; /* Match background color */
+        padding: 10px 0; /* Add padding */
+        z-index: 1; /* Ensure it appears above other elements */
+        align-items: center; /* Center items horizontally */
+        gap: 5px; /* Reduced space between links */
+    }
+
+    nav .nav-links.active {
+        display: flex; /* Show nav links when active */
+        justify-content: center; /* Center items when displayed */
+    }
+
+    nav a {
+        font-size: 14px; /* Adjust font size for mobile */
+        margin-bottom: 5px; /* Space between links */
+    } 
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* Change to 2 columns on small screens */
+    }
+    
+    .grid-container img {
+        width: 100%; /* Ensure images scale properly */
+        height: auto; /* Maintain aspect ratio */
+    } 
+    .instagram-title{
+        font-size: 30px;
+        line-height: 35px;
+    } 
+    #intro{
+        font-size: 20px;
+        line-height: 25px;
+    } 
+    #Choose{
+        font-size: 25px;
+        line-height: 30px;
+    }
+    #tagline{
+      
+        font-size: 20px;
+     text-align: center;
+      
+        line-height: 30px;
+       
+     
+    } 
+    #get{
+      font-size: 40px;
+      line-height: 35px;
+      text-align: center; 
+      margin-left: 50px;
+    } 
+    .contact-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  /* Adjust the map size for smaller screens */
+  .map iframe {
+    width: 100%;
+    height: 250px;
+    margin-left: 0;
+  }
+
+  /* Adjust the form width and remove margins */
+  .contact-form {
+    width: 100%;
+    margin-right: 0;
+    height: auto;
+  }
+
+  /* Center the button and adjust width */
+  .contact-form button {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  /* Adjust font sizes for smaller screens */
+  .contact-form label,
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px;
+  }
+
+  /* Reduce form padding */
+  .contact-form input,
+  .contact-form textarea {
+    padding: 8px;
+  }
+}
+
 </style>
 <body> 
-<header>
+  <header>
     <div class="navbar-container">
         <nav>
             <img src="logo.jpeg" alt="Logo">
-            <div> 
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger menu icon -->
+            <div class="nav-links" id="navLinks" style="border-radius: 10px;
+            ;"> <!-- Container for nav links -->
                 <div class="dropdown">
-                <a href="#">About Us</a>
-                <div class="dropdown-content" style="height: 400px;">
-                    <a href="#">Our Purpose</a> 
-                    <hr style="width: 75px; margin-left: 10px;">
-                    <a href="#">Our Values</a>
-                    <hr style="width: 75px; margin-left: 10px;">
-                    <a href="#">What we do</a>
-                    <hr style="width: 75px; margin-left: 10px;">
-                    <a href="#">Why Choose us?</a>
-                    <hr style="width: 100px; margin-left: 10px;">
-                   <a href="#">Contract Manufacturing</a> 
-                   <hr style="width: 100px; margin-left: 10px;">
-                   <a href="#">Board of Director</a> 
-                   <hr style="width: 100px; margin-left: 10px;">
-                   <a href="#">Join Our Team</a> 
-              
-                </div>
+                    <a href="#">About Us</a>
+                    <div class="dropdown-content" style="height: 400px;">
+                        <a href="#">Our Purpose</a>
+                        <hr style="width: 75px; margin-left: 10px;">
+                        <a href="#">Our Values</a>
+                        <hr style="width: 75px; margin-left: 10px;">
+                        <a href="#">What we do</a>
+                        <hr style="width: 75px; margin-left: 10px;">
+                        <a href="#">Why Choose us?</a>
+                        <hr style="width: 100px; margin-left: 10px;">
+                        <a href="#">Contract Manufacturing</a>
+                        <hr style="width: 100px; margin-left: 10px;">
+                        <a href="#">Board of Director</a>
+                        <hr style="width: 100px; margin-left: 10px;">
+                        <a href="#">Join Our Team</a>
+                    </div>
                 </div>
                 <div class="dropdown">
                     <a href="#">Our Services</a>
                     <div class="dropdown-content">
-                        <a href="#">Residential Real Estate</a> 
+                        <a href="#">Residential Real Estate</a>
                         <hr style="width: 75px; margin-left: 10px;">
                         <a href="#">Our Values</a>
                         <hr style="width: 75px; margin-left: 10px;">
@@ -237,25 +354,20 @@ nav a {
                         <hr style="width: 75px; margin-left: 10px;">
                         <a href="#">Real Estate Development</a>
                         <hr style="width: 100px; margin-left: 10px;">
-                       <a href="#">Consulting Services</a> 
-                  
-                     
-                        
-
+                        <a href="#">Consulting Services</a>
                     </div>
                 </div>
                 <a href="#">Blogs</a>
                 <a href="#">Contact Us</a>
             </div>
         </nav>
-    </div> 
+    </div>
 </header>
 
-  
 
   <!-- Main Section -->
   <section class="contact-section">
-    <h2 style="text-align: center;color: #164B67;">GET IN TOUCH WITH US</h2>
+    <h2 id="get">GET IN TOUCH WITH US</h2>
 
     
     <div class="contact-container">
@@ -286,4 +398,11 @@ nav a {
   </section>
 
 </body>
+<script>
+  function toggleMenu() {
+  const navLinks = document.getElementById('navLinks');
+  navLinks.classList.toggle('active'); // Toggle active class to show/hide links
+}
+
+</script>
 </html>
