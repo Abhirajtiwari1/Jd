@@ -12,7 +12,13 @@
             margin: 0;
             font-family: 'Inter', Courier, monospace;
             overflow-x: hidden;
+    
+    padding: 0; /* Reset default padding */
+    box-sizing: border-box; /* Set box-sizing to border-box */
         } 
+        * {
+    box-sizing: inherit; /* Apply box-sizing to all elements */
+}
         header {
             background-color: #F2F2F2;
             padding: 30px 50px;
@@ -114,7 +120,8 @@
             width: 100%;
             height: auto;
             margin-top: 50px;
-            padding: 20px;
+            padding: 20px; 
+            overflow-x: hidden;
         }
         .why-choose-us img {
             width: 50%;
@@ -138,8 +145,8 @@
             margin-top: 20px;
         }
         .grid-container img {
-            width: 441px;
-            height: 441px;
+            width: 100%;
+            height: auto;
             top: 2941px;
             left: 38px;
             gap: 0px;
@@ -204,11 +211,14 @@ nav .menu-icon {
     cursor: pointer; /* Pointer cursor on hover */
 }
 
-        
-     /* Media Query for Mobile Devices */
-     @media (max-width: 768px) {
-    /* Navbar styles */
-    nav {
+    /* Media Query for Mobile Devices */
+    @media (max-width: 768px) { 
+       
+        header {
+            padding: 20px;
+        }
+
+        nav {
         justify-content: space-between; /* Maintain space between items */
     }
 
@@ -241,58 +251,69 @@ nav .menu-icon {
     nav a {
         font-size: 14px; /* Adjust font size for mobile */
         margin-bottom: 5px; /* Space between links */
-    } 
-    #About img{
-        margin-left: 40px;
-    } 
-    #About1{
-        font-size: 15px;
-        line-height: 15px;
+    }
+
+        
+
+        
+
+        .why-choose-us {
+            flex-direction: column;
+        }
+
+        .why-choose-us img, .why-choose-us .text-content {
+            width: 100%;
+        }
+
+        #About1, #About2, #Why, #cumin, #insta {
+            font-size: 18px; /* Reduce font size for smaller screens */
+        }
+
+        .img img {
+            width: 90%; /* Reduce image size for better fit */
+        }
+
+        .grid-container {
+         
+        grid-template-columns: repeat(2, 1fr); /* Adjust for smaller screens */
     
-        margin-left: 50px;
-     } 
-    #About2{
-        font-size: 14px;
-        line-height: 15px;
-        margin-left: 50px;
-        text-align: center;
+            
+        }
 
-    } 
-    #Why{
-        font-size: 30px;
-        line-height: 30px;
-        margin-left: 50px;
-        margin-top: 50px;
-       
-    } 
-    .why-choose-us {
-        flex-direction: column; /* Stack items vertically in portrait mode */
-        align-items: center; /* Center items horizontally */
+        .grid-container img {
+            width: 100%;
+            height: auto;
+        }
     }
 
-    .why-choose-us img {
-        width: 100%; /* Take full width in mobile view */
-        border-radius: 10px; /* Adjust border radius for a card look */
+    @media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Stack images on very small screens */
     }
-
-    .why-choose-us .text-content {
-        width: 100%; /* Take full width in mobile view */
-        padding: 10px; /* Reduce padding for mobile */
-    }
-
-    .why-choose-us .text-content p {
-        font-size: 14px; /* Slightly smaller font size for better readability on mobile */
-    } 
-    #spice5{
-        margin-right: 45px;
-    } 
-    #cumin{
-        font-size: 20px;
-    } 
-    #insta{
-        font-size: 30px;
-        line-height: 45px;
-    }
+    #About1{
+            font-size: 20px;
+            line-height: 25px;
+            text-align: le;
+        }
+        #About2{
+            font-size: 20px;
+            line-height: 25px;
+            text-align: le;
+        }
+        #Why{
+            font-size: 35px;
+            margin-top: 30px;
+        }
+        #cumin{
+            font-size: 25px;
+            margin-top: 50px;
+            line-height: 30px;
+        }
+        #insta{
+            font-size: 25px;
+            margin-top: 50px;
+            line-height: 30px;
+        }
 }
 
     </style>
@@ -366,12 +387,12 @@ nav .menu-icon {
         </div>
     </div> 
     <h1 id="cumin">WE ARE CUMIN MANUFACTURER</h1>   
-    <div class="img" style="margin-bottom: 50px; margin-top: 1px;">
+    <div class="img" style="margin-bottom: 50px;">
         <img src="cumin.png" alt="Image">
     </div>
     <h1  id="insta">STAY IN TOUCH ON INSTAGRAM </h1> 
-    <div style="background-color: #B4DCEA; width: 100%; height: auto; gap: 0px; opacity: 0px;">
-        <div class="grid-container" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+    <div style="background-color: #B4DCEA;width: 100%;  height: auto; gap: 0px; opacity: 0px;">
+        <div class="grid-container" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; width: 100%;">
             <img src="insta1.jpeg" alt="Image 1">
             <img src="insta2.jpeg" alt="Image 2">
             <img src="insta3.png" alt="Image 3">
