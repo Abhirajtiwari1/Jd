@@ -8,77 +8,175 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <title>JD</title>
     <style> 
-    *{
+    * {
         font-family: 'Inter', Courier, monospace;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
-        .card-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-            position: relative; /* Add this to make the container a positioning context */
-        }
-        .card {
-            width: 606px;
-            height: 540px;
-            border-radius: 28px 0px 0px 0px;
-            opacity: 0px;
-            position: relative; /* Add this to make the card a positioning context */
-        }
-        .card img {
-            border-radius: 10px;
-            width: 100%;
-            height: 100%;
-        }
-        .overlay-card {
-            width: 327px;
-            height: 257px;
-            position: absolute;
-            top: 50%; /* Adjust as needed */
-            left: 50%; /* Adjust as needed */
-            transform: translate(-50%, -50%); /* Center the overlay card */
-            border-radius: 10px;
-            background-color: #fff; /* Optional: Add a background color */
-        } 
-        button{
-           margin-top: 200px;
-            position: absolute;
-            top: 50%; /* Adjust as needed */
-            left: 50%; /* Adjust as needed */ 
-            transform: translate(-50%, -50%); /* Center the overlay card */
-          width: 200px;
-          height: 48px;
 
-padding: 12px 18px 0px 18px;
+    .card-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+        position: relative;
+    }
+
+    .card {
+        width: 606px;
+        height: 540px;
+        border-radius: 28px;
+        position: relative;
+        opacity: 1;
+        overflow: hidden; /* Ensure content doesn't overflow */
+    }
+
+    .card img {
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensure image fits within the card */
+    }
+
+    .overlay-card {
+        width: 90%;
+        max-width: 300px;
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -20%);
+        border-radius: 10px;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow to make it stand out */
+    }
+
+    
+
+    .overlay-card img {
+        display: block;
+        width: 94px;
+        height: 100px;
+        margin: 0 auto 20px auto; /* Center the image */
+    }
+
+    img.logo {
+        width: 152px;
+height: 134px;
+margin-top: 41px;
+margin-left: 700px;
+gap: 0px;
+opacity: 0px;
+margin-bottom: 15px;
+
+    }
+
+    .center-text {
+        font-family: Inter;
+font-size: 20px;
+font-weight: 400;
+line-height: 24.2px;
 text-align: center;
-border-radius: 25px;
 
-
-        }
-        .overlay-card img {
-           
-width: 94px;
-height: 100px;
-top: 477px;
-margin-left: 120px;
 gap: 0px;
 opacity: 0px;
 
+    } 
+.center-text1{
+    font-family: Inter;
+font-size: 24px;
+font-style: italic;
+font-weight: 700;
+line-height: 29.05px;
+text-align: center;
+margin-top: 10px;
+}
 
+    p {
+        line-height: 1.6;
+    }
+    .overlay-btn {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 48px;
+    padding: 12px 18px;
+    text-align: center;
+    border-radius: 25px;
+
+    color: black;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+    /* Responsive styles for mobile portrait view */
+    @media (max-width: 768px) { 
+        .mobile-hide{
+            display: none;
         }
+        .card-container {
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .card {
+            width: 90%;
+            height: auto;
+        }
+
+        .card img {
+            height: auto;
+        }
+
+        .overlay-card {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            padding: 20px;
+        }
+
+        .overlay-card img {
+            margin-bottom: 20px;
+            opacity: 1;
+        }
+
+        button {
+            width: 100%;
+            max-width: 180px;
+            height: 48px;
+        }
+
+        img.logo {
+           
+            height: 134px;
+            margin-left: 130px;
+        }
+
+        p.center-text {
+            font-size: 19px;
+        }
+    }
     </style>
 </head>
 <body>
-    <img src="logo.jpeg" style="width: 300px;height: 250px;margin-left: 550px;gap: 0px;opacity: 0px;">
-    <p style="text-align: center; font-family: Inter; font-size: 20px; font-weight: 400; line-height: 24.2px; text-align: center;">
-        JD is a versatile brand excelling in real estate and premium spices. Offering top-tier property services across <br> various sectors and delivering high-quality, sustainably sourced spices, JD seamlessly merges the art of property <br> with the science of flavor.
-    </p> 
-    <p style="font-family: Inter; font-size: 24px; font-style: italic; font-weight: 700; line-height: 29px; text-align: center;">
-        “Where innovation meets tradition: JD shapes spaces <br> and flavors, blending excellence in real estate with <br> the richness of premium spices.”
-    </p> 
+    <img class="logo" src="logo1.jpeg" alt="Logo">
+    
+    <p class="center-text">
+        JD is a versatile brand excelling in real estate and premium spices. Offering top-tier property services across <br class="mobile-hide"> various sectors and delivering high-quality, sustainably sourced spices, JD seamlessly merges the art of property <br class="mobile-hide"> with the science of flavor.
+    </p>
+    
+    <p class="center-text1">
+        “Where innovation meets tradition: JD shapes spaces <br class="mobile-hide"> and flavors, blending excellence in real estate with <br class="mobile-hide"> the richness of premium spices.”
+    </p>
+    
     <div class="card-container">
         <div class="card">
-            <img src="card1.png" alt="Card 1"> 
+            <img src="card1.png" alt="Card 1" style="height: 500px;"> 
             <div class="overlay-card">
                 <img src="logo.jpeg" alt="Overlay Card">
                 <p style="font-family: Inter;
@@ -86,15 +184,15 @@ opacity: 0px;
                 font-weight: 400;
                 line-height: 15.73px;
                 text-align: center;
-                ">JD Relators is a premier real estate firm <br> specializing in residential, commercial, and <br> industrial properties, offering tailored <br> solutions to meet diverse client needs. We transform <br> property transactions into exceptional experiences,<br> helping you find a space that aligns with your vision and goals.</p>
-                <a href="slide2.html" target="_self">
-                    <button>Explore Now</button>
-                </a>
+                ">JD Relators is a premier real estate firm specializing in residential, commercial, and industrial properties, offering tailored solutions to meet diverse client needs. We transform property transactions into exceptional experiences,helping you find a space that aligns with your vision and goals.</p>
             </div>  
+            <a href="slide2.html" target="_self">
+                <button class="overlay-btn">Explore</button>
+            </a>
         
         </div>
         <div class="card">
-            <img src="card2.png" alt="Card 2">
+            <img src="card2.png" alt="Card 2" style="height: 500px;">
             <div class="overlay-card">
                 <img src="logo.jpeg" alt="Overlay Card">
                 <p style="font-family: Inter;
@@ -102,11 +200,12 @@ opacity: 0px;
                 font-weight: 400;
                 line-height: 15.73px;
                 text-align: center;
-                ">JD International Group delivers premium, <br> sustainably sourced spices that elevate <br> global culinary experiences, alongside <br> innovative real estate solutions across <br> residential, commercial, and industrial <br> sectors. We are committed to excellence in <br> both flavor and property.</p>
+                ">JD International Group delivers premium,sustainably sourced spices that elevate  global culinary experiences, alongside innovative real estate solutions across  residential, commercial, and industrial  sectors. We are committed to excellence in  both flavor and property.</p> 
+            
             </div>  
             <a href="spices.html" target="_self">
-            <button>Explore Now</button>
-            </a>
+                <button class="overlay-btn">Explore</button>
+                </a>
         </div>
     </div>
 </body>
