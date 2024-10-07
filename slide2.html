@@ -252,10 +252,7 @@ text-align: left;
         width: 100%; /* Ensure images scale properly */
         height: auto; /* Maintain aspect ratio */
     } 
-    .instagram-title{
-        font-size: 30px;
-        line-height: 35px;
-    } 
+     
     #intro{
         font-size: 20px;
         line-height: 25px;
@@ -272,6 +269,14 @@ text-align: left;
         line-height: 30px;
        
      
+    } 
+    .instagram-container {
+        grid-template-columns: 1fr; /* Single column layout for mobile view */
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+    .instagram-post {
+        margin-bottom: 20px; /* Space between posts in column view */
+        max-width: 100%; /* Make sure the post does not exceed the viewport width */
     }
 }
 
@@ -284,7 +289,7 @@ text-align: left;
     <header>
         <div class="navbar-container">
             <nav>
-                <img src="logo.jpeg" alt="Logo">
+                <img src="logo.jpeg" alt="Logo" style="border-radius: 100%;">
                 <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger menu icon -->
                 <div class="nav-links" id="navLinks" style="border-radius: 10px;
                 ;"> <!-- Container for nav links -->

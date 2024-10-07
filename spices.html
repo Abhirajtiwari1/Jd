@@ -3,21 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <title>Spices</title>
     <style>
-        body {
+       html, body {
             margin: 0;
             font-family: 'Inter', Courier, monospace;
             overflow-x: hidden;
     
-    padding: 0; /* Reset default padding */
-    box-sizing: border-box; /* Set box-sizing to border-box */
+    padding: 0; 
+  
+    width: 100%;
+    overflow-x: hidden;
+
         } 
         * {
-    box-sizing: inherit; /* Apply box-sizing to all elements */
+    box-sizing: border-box; /* Ensure consistent sizing */
+    margin: 0; /* Remove any default margin */
+    padding: 0;
 }
         header {
             background-color: #F2F2F2;
@@ -63,7 +69,7 @@
             z-index: 1;
             border-radius: 12px;
             width: 217px;
-            height: 300px;
+            height: 217px;
         }
         .dropdown-content a {
             color: white;
@@ -163,7 +169,7 @@
             z-index: 1; 
             border-radius: 12px; 
             width: 217px;
-            height: 300px;
+            height: 310px;
         }
         .dropdown-content a {
             color: white;
@@ -197,20 +203,33 @@
     text-align: center; 
     color: #164965;
 }
-#insta{
-    font-family: Inter;
-    font-size: 48px;
-    font-weight: 200;
-    line-height: 58.42px;
-    text-align: center; 
-    color: #164B67;
-}
+
 nav .menu-icon {
     display: none; /* Hide menu icon on desktop */
     font-size: 24px; /* Icon size */
     cursor: pointer; /* Pointer cursor on hover */
 }
+#instagram{
+    margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+} 
 
+.instagram-container {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-gap: 20px;
+            padding: 20px; 
+            background-color: #B4DCEA;
+        }
+
+        .instagram-post {
+            max-width: 100%; 
+        }
     /* Media Query for Mobile Devices */
     @media (max-width: 768px) { 
        
@@ -272,24 +291,21 @@ nav .menu-icon {
         .img img {
             width: 90%; /* Reduce image size for better fit */
         }
-
-        .grid-container {
-         
-        grid-template-columns: repeat(2, 1fr); /* Adjust for smaller screens */
-    
-            
-        }
-
-        .grid-container img {
-            width: 100%;
-            height: auto;
-        }
+        .instagram-container {
+        grid-template-columns: 1fr; /* Single column layout for mobile view */
+        padding: 10px; /* Reduce padding for smaller screens */
     }
+    .instagram-post {
+        margin-bottom: 20px; /* Space between posts in column view */
+        max-width: 100%; /* Make sure the post does not exceed the viewport width */
+    }
+        
+
+        
+    } 
 
     @media (max-width: 480px) {
-    .grid-container {
-        grid-template-columns: 1fr; /* Stack images on very small screens */
-    }
+   
     #About1{
             font-size: 20px;
             line-height: 25px;
@@ -309,11 +325,7 @@ nav .menu-icon {
             margin-top: 50px;
             line-height: 30px;
         }
-        #insta{
-            font-size: 25px;
-            margin-top: 50px;
-            line-height: 30px;
-        }
+       
 }
 
     </style>
@@ -322,13 +334,13 @@ nav .menu-icon {
     <header style="width: 100%;">
         <div class="navbar-container">
             <nav>
-                <img src="logo.jpeg" alt="Logo">
+                <img src="logo.jpeg" alt="Logo" style="border-radius: 100%;">
                 <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger menu icon -->
                 <div class="nav-links" id="navLinks" style="border-radius: 10px;
                 ;"> <!-- Container for nav links -->
                     <div class="dropdown">
                         <a href="#">About Us</a>
-                        <div class="dropdown-content" style="height: 400px;">
+                        <div class="dropdown-content">
                             <a href="#">Our Purpose</a>
                             <hr style="width: 75px; margin-left: 10px;">
                             <a href="#">Our Values</a>
@@ -344,7 +356,7 @@ nav .menu-icon {
                             <a href="#">Join Our Team</a>
                         </div>
                     </div>
-                    <div class="dropdown">
+                    <div class="dropdown"> 
                         <a href="#">Our Services</a>
                         <div class="dropdown-content">
                             <a href="#">Residential Real Estate</a>
@@ -388,20 +400,48 @@ nav .menu-icon {
     </div> 
     <h1 id="cumin">WE ARE CUMIN MANUFACTURER</h1>   
     <div class="img" style="margin-bottom: 50px;">
-        <img src="cumin.png" alt="Image">
-    </div>
-    <h1  id="insta">STAY IN TOUCH ON INSTAGRAM </h1> 
-    <div style="background-color: #B4DCEA;width: 100%;  height: auto; gap: 0px; opacity: 0px;">
-        <div class="grid-container" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; width: 100%;">
-            <img src="insta1.jpeg" alt="Image 1">
-            <img src="insta2.jpeg" alt="Image 2">
-            <img src="insta3.png" alt="Image 3">
-            <img src="insta4.jpeg" alt="Image 4">
-            <img src="insta5.jpeg" alt="Image 5">
-            <img src="insta6.jpeg" alt="Image 6"> 
-        </div>
+        <img src="cumin.png" alt="Image"> 
     </div>
 </section>   
+<section id="instagram"></section>
+    <h1 style="font-family: Inter;
+    font-size: 48px;
+    font-weight: 200;
+    line-height: 58.42px;
+    text-align: center; color: #164B67;
+    ">Stay in touch on Instagram</h1> 
+  <div class="instagram-container">
+    <!-- First Instagram Post Embed -->
+    <div class="instagram-post">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DAl5uaxPxSg/" data-instgrm-version="12" style="width: 100%;"></blockquote>
+    </div>
+    <!-- Second Instagram Post Embed -->
+    <div class="instagram-post">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DAiHSNbvjIf/" data-instgrm-version="12" style="width: 100%;"></blockquote>
+    </div>
+    <!-- Third Instagram Post Embed -->
+    <div class="instagram-post">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DAiAMFwPs5c/" data-instgrm-version="12" style="width: 100%;"></blockquote>
+    </div>
+    <!-- Add more posts as needed -->
+    <div class="instagram-post">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C3zmYL2Nz0B/" data-instgrm-version="12" style="width: 100%;"></blockquote>
+    </div>
+    <div class="instagram-post">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C1gnx9IhWKr/" data-instgrm-version="12" style="width: 100%;"></blockquote>
+    </div>
+    <div class="instagram-post">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C1Wk-iXNZ4u/" data-instgrm-version="12" style="width: 100%;"></blockquote>
+    </div>
+    <div class="instagram-post">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C1UzGf7NkUl/" data-instgrm-version="12" style="width: 100%;"></blockquote>
+    </div>
+    <div class="instagram-post">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C1gnx9IhWKr/" data-instgrm-version="12" style="width: 100%;"></blockquote>
+    </div>
+ 
+</div>
+</section>
 </body> 
 <script>
     function toggleMenu() {
@@ -409,5 +449,6 @@ nav .menu-icon {
     navLinks.classList.toggle('active'); // Toggle active class to show/hide links
 }
 
-</script>
+</script> 
+<script async src="//www.instagram.com/embed.js"></script>
 </html>
