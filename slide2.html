@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="/logo.jpeg" type="image/jpeg">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <title>Slide2</title>
-    <style>
+    <style> 
+    * {
+    box-sizing: border-box;
+}
+
         body {
             margin: 0;
             font-family: 'Inter', Courier, monospace;
@@ -112,13 +117,10 @@ opacity: 0px;
     text-align: center; 
     color: #164B67;
 }  
-.instagram-section{
-    background-color: #B4DCEA; 
-    width: 100%; 
-    height: auto; 
-    gap: 0px; 
-    opacity: 0px;
-}     
+
+
+
+
     .dropdown {
         position: relative;
         display: inline-block;
@@ -182,7 +184,28 @@ text-align: left;
         line-height: 48.68px;
         text-align: center;
         color: #164965; 
-}
+} 
+#instagram{
+    margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+} 
+
+.instagram-container {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-gap: 20px;
+            padding: 20px; 
+            background-color: #B4DCEA;
+        }
+
+        .instagram-post {
+            max-width: 100%; 
+        }
 
 /* Media Query for Mobile Devices */
 /* Media Query for Mobile Devices */
@@ -329,18 +352,47 @@ text-align: left;
     <div class="img">
         <img src="img.jpeg" alt="Image" id="location">
     </div>
-    <h1 class="instagram-title">STAY IN TOUCH ON INSTAGRAM</h1> 
-<div class="instagram-section">
-    <div class="grid-container" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
-        <img src="insta1.jpeg" alt="Image 1">
-        <img src="insta2.jpeg" alt="Image 2">
-        <img src="insta3.png" alt="Image 3">
-        <img src="insta4.jpeg" alt="Image 4">
-        <img src="insta5.jpeg" alt="Image 5">
-        <img src="insta6.jpeg" alt="Image 6"> 
-</div>
     </div>
-</section>   
+</section>    
+<section id="instagram">
+    <h1 style="font-family: Inter;
+    font-size: 48px;
+    font-weight: 200;
+    line-height: 58.42px;
+    text-align: center; color: #164B67;
+    ">Stay in touch on Instagram</h1> 
+  <div class="instagram-container">
+    <!-- First Instagram Post Embed -->
+    <div class="instagram-post">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DAl5uaxPxSg/" data-instgrm-version="12" style="width: 100%;"></blockquote>
+    </div>
+    <!-- Second Instagram Post Embed -->
+    <div class="instagram-post">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DAiHSNbvjIf/" data-instgrm-version="12" style="width: 100%;"></blockquote>
+    </div>
+    <!-- Third Instagram Post Embed -->
+    <div class="instagram-post">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DAiAMFwPs5c/" data-instgrm-version="12" style="width: 100%;"></blockquote>
+    </div>
+    <!-- Add more posts as needed -->
+    <div class="instagram-post">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C3zmYL2Nz0B/" data-instgrm-version="12" style="width: 100%;"></blockquote>
+    </div>
+    <div class="instagram-post">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C1gnx9IhWKr/" data-instgrm-version="12" style="width: 100%;"></blockquote>
+    </div>
+    <div class="instagram-post">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C1Wk-iXNZ4u/" data-instgrm-version="12" style="width: 100%;"></blockquote>
+    </div>
+    <div class="instagram-post">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C1UzGf7NkUl/" data-instgrm-version="12" style="width: 100%;"></blockquote>
+    </div>
+    <div class="instagram-post">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C1gnx9IhWKr/" data-instgrm-version="12" style="width: 100%;"></blockquote>
+    </div>
+ 
+</div>
+</section>
 
 </body> 
 <script>
@@ -350,4 +402,5 @@ text-align: left;
 }
 
 </script>
+<script async src="//www.instagram.com/embed.js"></script>
 </html>
