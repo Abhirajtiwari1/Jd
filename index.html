@@ -58,15 +58,15 @@
     .overlay-card img {
         display: block;
         width: 94px;
-        height: 100px;
+        height: 200px;
         margin: 0 auto 20px auto; /* Center the image */
     }
 
-    img.logo {
-        width: 152px;
-height: 134px;
-margin-top: 41px;
-margin-left: 700px;
+    .logo {
+        height: 320px; 
+        width: 297px;
+margin-top: 20px;
+margin-left: 610px;
 gap: 0px;
 opacity: 0px;
 margin-bottom: 15px;
@@ -112,6 +112,21 @@ margin-top: 10px;
     border: none;
     font-size: 16px;
     cursor: pointer;
+} 
+#Realtors{
+    font-family: Inter;
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 15.73px;
+                text-align: center;
+} 
+#spices{
+    font-family: Inter;
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 15.73px;
+                text-align: center;
+                
 }
 
     /* Responsive styles for mobile portrait view */
@@ -119,53 +134,52 @@ margin-top: 10px;
         .mobile-hide{
             display: none;
         }
-        .card-container {
-            flex-direction: column;
-            align-items: center;
-            gap: 30px;
-        }
+       
 
-        .card {
-            width: 90%;
-            height: auto;
-        }
-
-        .card img {
-            height: auto;
-        }
-
-        .overlay-card {
-            width: 100%;
-            max-width: 300px;
-            height: auto;
-            padding: 20px;
-        }
-
-        .overlay-card img {
-            margin-bottom: 20px;
-            opacity: 1;
-        }
-
+      
         button {
             width: 100%;
             max-width: 180px;
-            height: 48px;
+            height: 48px; 
         }
 
-        img.logo {
+        .logo {
            
-            height: 134px;
-            margin-left: 130px;
+            height: 300px;
+            margin-left: 80px; 
+            width: auto;
         }
 
         p.center-text {
             font-size: 19px;
-        }
+        } 
+       
+       #spices,#Realtors{
+        display: none;
+       } 
+       .card{
+        width: 300px;
+        height: 250px; 
+        border-radius: 28px;
+       }
+      .overlay-card{
+        width: 150px;
+        height: 100px; 
+      }
+      .overlay-card img {
+        display: block;
+        width: 100px;
+        height: 50px;
+        margin: 0 auto 20px auto; /* Center the image */
+    } 
+
+       
+       
     }
     </style>
 </head>
 <body>
-    <img class="logo" src="logo1.jpeg" alt="Logo">
+    <img class="logo" src="combinedLogo.jpeg" alt="Logo">
     
     <p class="center-text">
         JD is a versatile brand excelling in real estate and premium spices. Offering top-tier property services across <br class="mobile-hide"> various sectors and delivering high-quality, sustainably sourced spices, JD seamlessly merges the art of property <br class="mobile-hide"> with the science of flavor.
@@ -179,16 +193,11 @@ margin-top: 10px;
         <div class="card">
             <img src="card1.png" alt="Card 1" style="height: 500px;"> 
             <div class="overlay-card">
-                <img src="logo.jpeg" alt="Overlay Card">
-                <p style="font-family: Inter;
-                font-size: 13px;
-                font-weight: 400;
-                line-height: 15.73px;
-                text-align: center;
-                ">JD Relators is a premier real estate firm specializing in residential, commercial, and industrial properties, offering tailored solutions to meet diverse client needs. We transform property transactions into exceptional experiences,helping you find a space that aligns with your vision and goals.</p>
+                <img src="jdRealtors.jpeg" alt="Overlay Card">
+                <p id="Realtors">JD Relators is a premier real estate firm specializing in residential, commercial, and industrial properties, offering tailored solutions to meet diverse client needs. We transform property transactions into exceptional experiences,helping you find a space that aligns with your vision and goals.</p>
             </div>  
             <a href="slide2.html" target="_self">
-                <button class="overlay-btn">Explore</button>
+                <button class="overlay-btn" type="button">Explore</button>
             </a>
         
         </div>
@@ -196,16 +205,11 @@ margin-top: 10px;
             <img src="card2.png" alt="Card 2" style="height: 500px;">
             <div class="overlay-card">
                 <img src="logo.jpeg" alt="Overlay Card">
-                <p style="font-family: Inter;
-                font-size: 13px;
-                font-weight: 400;
-                line-height: 15.73px;
-                text-align: center;
-                ">JD International Group delivers premium,sustainably sourced spices that elevate  global culinary experiences, alongside innovative real estate solutions across  residential, commercial, and industrial  sectors. We are committed to excellence in  both flavor and property.</p> 
+                <p id="spices">JD International Group delivers premium,sustainably sourced spices that elevate  global culinary experiences, alongside innovative real estate solutions across  residential, commercial, and industrial  sectors. We are committed to excellence in  both flavor and property.</p> 
             
             </div>  
             <a href="spices.html" target="_self">
-                <button class="overlay-btn">Explore</button>
+                <button class="overlay-btn" type="button">Explore</button>
                 </a>
         </div>
     </div>
