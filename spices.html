@@ -84,7 +84,58 @@
         }
         .dropdown:hover .dropdown-content {
             display: block;
-        }
+        } 
+        .spice-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: radial-gradient(92.01% 421.51% at 24.69% 7.99%, #14A0D2 29.96%, #165B7C 79.64%, #164965 100%);
+      padding: 20px;
+      height: auto; /* Adjust to fit content */
+      min-height: 300px; 
+      margin-top: 10px;
+    }
+
+    .spice-content {
+      max-width: 50%;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .spice-content p {
+        font-family: Inter;
+font-size: 36px;
+font-weight: 400;
+line-height: 43.81px; 
+text-align: left; 
+margin-left: 70px;
+}
+
+    .spice-button {
+        width: 222px;
+height: 59px;
+margin-top: 30px;
+margin-left: 70px;
+gap: 0px;
+border-radius: 20px;
+border: 1px solid black;
+opacity: 0px;
+
+    }
+
+    .spice-image {
+      width: 45%;
+      background-image: url('/firstSection.png'); /* Replace with actual path */
+      background-size: contain; /* Ensure the image fits within the container */
+      background-repeat: no-repeat;
+      background-position: center;
+      height: auto;
+      aspect-ratio: 1 / 1; /* Adjust the aspect ratio to ensure it remains balanced */
+    }
+
+
+
+
         #About div {
             width: 100%;
             height: auto;
@@ -341,7 +392,7 @@ nav .menu-icon {
                 <div class="nav-links" id="navLinks" style="border-radius: 10px;
                 ;"> <!-- Container for nav links -->
                     <div class="dropdown">
-                        <a href="#">About Us</a>
+                        <a href="aboutSpices.html">About Us</a>
                         <div class="dropdown-content">
                             <a href="#">Our Purpose</a>
                             <hr style="width: 75px; margin-left: 10px;">
@@ -360,16 +411,14 @@ nav .menu-icon {
                     </div>
                     <div class="dropdown"> 
                         <a href="#">Our Services</a>
-                        <div class="dropdown-content">
-                            <a href="#">Residential Real Estate</a>
+                        <div class="dropdown-content" style="height: 200px;">
+                            <a href="#">Whole Spices</a>
                             <hr style="width: 75px; margin-left: 10px;">
-                            <a href="#">Our Values</a>
+                            <a href="#">Ground Spices</a>
                             <hr style="width: 75px; margin-left: 10px;">
-                            <a href="#">Commercial Real Estate</a>
+                            <a href="#">Blended Spices</a>
                             <hr style="width: 75px; margin-left: 10px;">
-                            <a href="#">Real Estate Development</a>
-                            <hr style="width: 100px; margin-left: 10px;">
-                            <a href="#">Consulting Services</a>
+
                         </div>
                     </div>
                     <a href="blog2.html" target="_self">Blogs</a>
@@ -377,15 +426,28 @@ nav .menu-icon {
                 </div>
             </nav>
         </div>
-    </header> 
+    </header>  
+
+    <div class="spice-section">
+        <div class="spice-content">
+        <p >From traditional favorites to unique <br> blends, our spices are designed to <br> meet the needs of both home cooks<br> and professional chefs.</p>
+          <button class="spice-button">More Spices</button>
+        </div>
+        <div class="spice-image"></div>
+      </div>
+
+<p style="font-family: Inter;
+font-size: 32px;
+font-weight: 400;
+line-height: 38.95px;
+text-align: left;
+margin-top: 50px;
+margin-left: 250px;
+">At JD International, we take pride in our deep-rooted expertise in spice <br> cultivation, processing, and export. We are committed to maintaining the <br> highest standards of quality and consistency across our entire product range. <br> Our comprehensive spice lineup includes cumin, coriander, fennel, and a variety <br> of other high-demand spices, carefully sourced and processed to preserve their <br> rich flavours and aromas.
+</p>
+
+
 <section id="About">
-    <div style="margin-top: 10px;">
-        <img src="spice4.jpeg" alt="Slide Image" id="spice1"> 
-    </div>
-    <p id="About1">
-        JD Internationals stands at the intersection of real estate innovation and culinary excellence. As a versatile leader in <br> both sectors, we pride ourselves on our ability to deliver exceptional value and quality. Our real estate division <br> specializes in creating and managing high-impact residential, commercial, and industrial properties, driven by a <br>  commitment to excellence and client satisfaction. </p> 
-    <p id="About2">Simultaneously, our spices division offers a rich array of premium, sustainably sourced spices and blends that elevate <br> culinary experiences around the world. Whether you're seeking a transformative property or a distinctive flavor, JD <br> Internationals is dedicated to exceeding expectations and enhancing lives through our diverse portfolio.
-    </p> 
     <h1 id="Why">WHY CHOOSE US ?</h1>
     <div class="why-choose-us">
         <img src="spice5.png" alt="Image 1"  id="spice5">
@@ -399,11 +461,60 @@ nav .menu-icon {
             From traditional favorites to unique blends, our spices <br> are designed to meet the needs of both home cooks <br>and professional chefs. We focus on maintaining the <br> highest standards of quality and freshness, ensuring <br>that every product we offer contributes to exceptional <br> culinary creations.
             </p>
         </div>
-    </div> 
-    <h1 id="cumin">WE ARE CUMIN MANUFACTURER</h1>   
-    <div class="img" style="margin-bottom: 50px;">
-        <img src="cumin.png" alt="Image"> 
+    </div>   
+<h1 style="font-family: Inter;
+font-size: 48px;
+font-weight: 400;
+line-height: 58.42px;
+text-align: center; 
+color: rgba(22, 73, 101, 1); 
+margin-top: 30px;
+">JD INTERNATIONAL IS TO PROVIDE HIGH QUALITY , <br> BEST TASTE AND NATURAL PRODUCTS</h1>
+<div class="image-text-section" style="display: flex; align-items: center; margin-top: 50px;">
+    <img src="cumin.jpg" alt="Descriptive Alt Text" style="width: 606px;
+    height: 496px;
+    gap: 0px;
+    border-radius: 20px;
+    opacity: 0px;
+    ">
+    <div class="text-content" style="width: 50%; padding: 20px;">
+        <p style="font-family: Inter; font-size: 24px; font-weight: 400; line-height: 29.21px; text-align: left;">
+            <ul style="font-family: Inter;
+            font-size: 38px;
+            font-weight: 300;
+            line-height: 46.25px;">
+                <li>Premium Quality</li>
+                <li>Sustainably Sourced</li>
+                <li>Traceable Supply Chain</li> 
+                <button style="width: 222px;
+                height: 59px;
+               margin-top: 50px;
+                left: 829px;
+                gap: 0px;
+                border-radius: 20px;
+                border: 1px solid black;
+                opacity: 0px; 
+                ">About Us</button>
+            </ul>  
+   </p>
+
     </div>
+    
+</div>
+    <section style="margin-top: 100px;">  
+        <h1 style="font-family: Inter;
+        font-size: 60px;
+        font-weight: 400;
+        line-height: 58.42px;
+        text-align: center; 
+        color: rgba(22, 73, 101, 1);
+        ">Our Range</h1> 
+<img src="spice4.jpeg" alt="Slide Image" id="spice1"> 
+</section>
+    <p id="About1">
+        JD Internationals stands at the intersection of real estate innovation and culinary excellence. As a versatile leader in <br> both sectors, we pride ourselves on our ability to deliver exceptional value and quality. Our real estate division <br> specializes in creating and managing high-impact residential, commercial, and industrial properties, driven by a <br>  commitment to excellence and client satisfaction. </p> 
+    <p id="About2">Simultaneously, our spices division offers a rich array of premium, sustainably sourced spices and blends that elevate <br> culinary experiences around the world. Whether you're seeking a transformative property or a distinctive flavor, JD <br> Internationals is dedicated to exceeding expectations and enhancing lives through our diverse portfolio.
+    </p> 
 </section>   
 <section id="instagram"></section>
     <h1 style="font-family: Inter;

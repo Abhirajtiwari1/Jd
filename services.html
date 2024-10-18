@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title> Services</title> 
+    <style>
+        body {
+            font-family: "Inter", serif; 
+        }   
+        header {
+            background-color: #F2F2F2;
+            padding: 30px 50px;
+        }
+        .navbar-container {
+            width: 100%;
+            height: 100px;
+            position: relative;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        nav img {
+            width: 150px;
+            height: 170px;
+            position: absolute;
+            left: 20px; 
+        }
+        nav div {
+            display: flex;
+            gap: 100px;
+            margin: auto;
+        }
+        nav a { 
+            text-decoration: none;
+            color: #164B67;
+            font-size: 16px;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #14A0D2;
+            z-index: 1; 
+            border-radius: 12px; 
+            width: 217px;
+            height: 300px;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 12px;
+            text-decoration: none;
+            display: block; 
+            font-family: Inter;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19.36px;
+            text-align: left;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        nav .menu-icon {
+            display: none; /* Hide menu icon on desktop */
+            font-size: 24px; /* Icon size */
+            cursor: pointer; /* Pointer cursor on hover */
+        } 
+        #location {
+            margin-left: 250px;
+        }
+        #aboutUs {
+            font-family: Inter;
+            font-size: 64px;
+            font-weight: 800;
+            line-height: 77.89px;
+            text-align: center; 
+            color: #164965;
+        } 
+        #intro {
+            font-size: 20px;
+        }
+        .card-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .card {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 10px 0;
+            width: 80%;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .card:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        .card-content {
+            flex: 1;
+        } 
+        .card-content>h2 {
+            font-family: Inter;
+            font-size: 48px;
+            font-weight: 500;
+            line-height: 58.42px;
+            text-align: center;
+        }
+        .card-content>p {
+            font-family: Inter;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 29.21px;
+            text-align: left; 
+            margin-left: 50px;
+        } 
+        #service1-img {
+            width: 490px;
+            height: 591px;
+            margin-left: 10px;
+            gap: 0px;
+            border-radius: 20px;
+            opacity: 0px;
+        } 
+        #service2-img {
+            width: 619px;
+            height: 408px;
+            top: 984px;
+            left: 726px;
+            gap: 0px;
+            border-radius: 50px;
+            opacity: 0px;
+        }
+        #service3-img {
+            width: 619px;
+            height: 408px;
+            top: 984px;
+            left: 726px;
+            gap: 0px;
+            border-radius: 50px;
+            opacity: 0px;
+        } 
+        #service4-img {
+            width: 585px;
+            height: 585px;
+            top: 1976px;
+            left: 746px;
+            gap: 0px;
+            border-radius: 20px;
+            opacity: 0px;
+        }
+        #service5-img {
+            width: 628px;
+            height: 404px;
+            top: 2652px;
+            left: 90px;
+            gap: 0px;
+            border-radius: 20px;
+            opacity: 0px;
+        } 
+        #tagline {
+            font-family: Inter;
+            font-size: 40px;
+            font-style: italic;
+            font-weight: 700;
+            line-height: 48.68px;
+            text-align: center;
+            color: #164965;
+        }
+        #instagram {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        } 
+        .instagram-container {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-gap: 20px;
+            padding: 20px; 
+            background-color: #B4DCEA;
+        }
+        .instagram-post {
+            max-width: 100%; 
+        }  
+    </style>
+</head>
+<body> 
+    <header>
+        <div class="navbar-container">
+            <nav>
+                <img src="logo.jpeg" alt="Logo" style="border-radius: 100%;">
+                <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger menu icon -->
+                <div class="nav-links" id="navLinks" style="border-radius: 10px;
+                ;"> <!-- Container for nav links -->
+                    <div class="dropdown">
+                        <a href="#">About Us</a>
+                        <div class="dropdown-content" style="height: 400px;">
+                            <a href="#">Our Purpose</a>
+                            <hr style="width: 75px; margin-left: 10px;">
+                            <a href="#">Our Values</a>
+                            <hr style="width: 75px; margin-left: 10px;">
+                            <a href="#">What we do</a>
+                            <hr style="width: 75px; margin-left: 10px;">
+                            <a href="#">Why Choose us?</a>
+                            <hr style="width: 100px; margin-left: 10px;">
+                            <a href="#">Contract Manufacturing</a>
+                            <hr style="width: 100px; margin-left: 10px;">
+                            <a href="#">Board of Director</a>
+                            <hr style="width: 100px; margin-left: 10px;">
+                            <a href="#">Join Our Team</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="#">Our Services</a>
+                        <div class="dropdown-content" style="height: 400px;">
+                            <a href="#">Exclusive Access to Prime Properties</a>
+                            <hr style="width: 75px; margin-left: 10px;">
+                            <a href="#">Tailored Investment Opportunities</a>
+                            <hr style="width: 75px; margin-left: 10px;">
+                            <a href="#">Expert Negotiation for Maximum Value</a>
+                            <hr style="width: 75px; margin-left: 10px;">
+                            <a href="#">Personalised Recommendations Based on Your Needs</a>
+                            <hr style="width: 100px; margin-left: 10px;">
+                            <a href="#">Long-Term Support and Guidance</a>
+                        </div>
+                    </div>
+                    <a href="blog1.html" target="_self">Blogs</a>
+                    <a href="./jd contactForm/public/index.html" target="_blank">Contact Us</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about">
+        <h1 id="aboutUs">OUR SERVICES</h1>  
+        <div class="card-section">
+            <div class="card">
+                <img src="service1.jpg" alt="Image 1" id="service1-img">
+                <div class="card-content">
+                    <h2>Exclusive Access to <br> Prime Properties</h2>
+                    <p>At JD REALTORS, our strong relationships with key players in Ahmedabad's real estate landscape enable <br> us to offer exclusive access to some of the most <br> sought-after properties in the city. From luxury apartments in prestigious neighbourhoods to <br> affordable housing options and commercial spaces,<br> we can present you with options that are often unavailable on the open market.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="service2.jpg" alt="Image 2" id="service2-img">
+                <div class="card-content">
+                    <h2>Tailored Investment <br> Opportunities</h2>
+                    <p> Whether you're a first-time buyer looking to secure a family home or an investor seeking high-yield opportunities, our team will help you identify the best properties for your needs. We evaluate potential investments based on current market conditions, projected growth, and rental yields to ensure your portfolio thrives.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="service3.jpg" alt="Image 3" id="service3-img">
+                <div class="card-content">
+                    <h2>Expert Negotiation for <br> Maximum Value</h2>
+                    <p>With our deep understanding of the local market and extensive experience in real estate negotiations, we ensure that you get the best value for your investment. Our team takes pride in securing favourable terms for our clients, whether you're buying, selling, or leasing a property.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="service4.jpg" alt="Image 4" id="service4-img" >
+                <div class="card-content">
+                    <h2>Personalised <br> Recommendations <br> Based on Your Needs</h2>
+                    <p>We take the time to understand your unique preferences, lifestyle, and financial goals, offering personalised property recommendations that perfectly align with your vision. Whether you're looking for a modern apartment with all the latest amenities or a spacious home in a quiet neighbourhood, we'll guide you to the right choice.</p>
+                </div>
+            </div> 
+            <div class="card">
+                <img src="service5.jpg" alt="Image 4" id="service5-img" >
+                <div class="card-content">
+                    <h2>Long-Term Support <br> and Guidance</h2>
+                    <p>Our commitment to you doesn't end at closing. We provide ongoing support to help you with any real estate needs that arise after your transaction is complete. Whether it's managing rental properties, assisting with future investments, or keeping you updated on market trends, we're here for the long term.</p>
+                </div>
+            </div> 
+        </div>
+    </section> 
+    <h1 id="tagline"> We Don’t Just Sell Houses,<br>
+        We Match Souls with Spaces</h1>   
+    <div class="img">
+        <img src="img.jpeg" alt="Image" id="location">
+    </div> 
+
+  
+</body> 
+<script async src="https://www.instagram.com/embed.js"></script>
+</html>

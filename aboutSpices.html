@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <title>About Us</title>
-    <style> 
- header {
+    <title>AboutUs</title>
+</head>
+<style>
+     header {
             background-color: #F2F2F2;
             padding: 30px 50px; 
             font-family: 'Inter', Courier, monospace;
@@ -74,10 +75,6 @@
             font-size: 24px; /* Icon size */
             cursor: pointer; /* Pointer cursor on hover */
         } 
-
-
-
-
         .card {
             display: flex;
             align-items: center;
@@ -106,7 +103,7 @@ line-height: 33.89px;
 text-align: left; 
 margin-left: 200px;
 
-        } 
+        }
         #tagline{
             font-family: Inter;
 font-size: 32px;
@@ -115,7 +112,7 @@ font-weight: 700;
 line-height: 38.73px;
 text-align: center;
 color: #164B67;
-        }
+        }  
         .about-us-card {
   display: flex;
   align-items: center;
@@ -155,14 +152,14 @@ font-weight: 700;
 line-height: 48.41px;
 text-align: left;
 text-decoration: underline;
-}
- .service-card {
+} 
+
+.service-card {
   display: flex; /* Use Flexbox to align items horizontally */
   align-items: center; /* Aligns the items vertically in the middle */
   justify-content: space-between; /* Ensures even space between the image and the text */
   padding: 20px;
 } 
-
 
 .service-image {
   max-width: 40%; /* Control the width of the image */
@@ -179,42 +176,83 @@ text-decoration: underline;
 font-size: 38px;
 font-weight: 300;
 line-height: 46.25px;
+} 
+.alternating-card-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto; 
+  margin-top: 30px;
 }
-.service-card-right {
-  display: flex; /* Align items horizontally */
-  align-items: center; /* Vertically align in the center */
-  justify-content: space-between; /* Ensure space between the text and image */
+
+.alternating-card {
+  display: flex;
+  align-items: center;
   padding: 20px;
+  gap: 20px;
+}
+
+.alternating-card-image img {
+    width: 603px;
+height: 461px;
+top: 2394px;
+left: 98px;
+gap: 0px;
+border-radius: 20px;
+opacity: 0px;
 
 }
 
-.service-text-left {
-  flex: 1; /* Take up the remaining space */
-  padding-right: 20px; /* Add space between text and image */
+.alternating-card-content {
+  max-width: 600px;
 }
 
-.service-image-right {
-  max-width: 40%; /* Control image size */
-  height: auto;
-  border-radius: 8px; /* Optional: Smooth corners for image */
-}
-
-.service-text-left p {
+.alternating-card-content h2 {
     font-family: Inter;
-font-size: 38px;
-font-weight: 300;
-line-height: 46.25px;
-margin-left: 149px;
-
-
+font-size: 64px;
+font-weight: 500;
+line-height: 77.89px;
+text-align: center;
 
 }
 
+.alternating-card-content p {
+  font-size: 16px;
+  color: #7f8c8d;
+  line-height: 1.8;
+}
 
+.reverse {
+  flex-direction: row-reverse;
+}
+#spice1{
+    width: 100%; 
+    height: auto; 
+    top: 179px; 
+    gap: 0px; 
+    opacity: 0px;
+} 
 
-    </style>
-</head>
-<body> 
+@media (max-width: 768px) {
+  .alternating-card, .reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .alternating-card-content {
+    margin-top: 15px;
+    max-width: 100%;
+  }
+
+  .alternating-card-image img {
+    width: 100%;
+    max-width: 320px;
+  }
+} 
+
+</style> 
+<body>
     <header>
         <div class="navbar-container">
             <nav>
@@ -259,18 +297,16 @@ margin-left: 149px;
                 </div>
             </nav>
         </div>
-    </header>
+    </header> 
 
-
-
-
+    
     <div class="card">
         <img src="combinedLogo.jpeg" alt="Image Description">
         <div class="card-content">
             <p>JD is a vibrant, multidimensional brand that operates in two <br> different but equally significant industries. Providing a full range of <br> services for residential, commercial, and industrial needs, JD is a <br> real estate expert in property development, management, and <br> investment. In addition, JD has made a name for itself in the <br> culinary industry by providing a range of premium mixes and <br> that are sourced responsibly.</p> 
         </div> 
-    </div> 
-    <p id="tagline">"Where innovation and tradition collide: JD creates spaces and flavors <br> by fusing the richness of premium spices with real estate excellence."</p> 
+    </div>  
+    <p id="tagline">"Where innovation and tradition collide: JD creates spaces and flavors <br> by fusing the richness of premium spices with real estate excellence."</p>  
 
     <div class="about-us-card">
         <div class="about-us-content">
@@ -280,66 +316,71 @@ margin-left: 149px;
           </p>
         </div>
         <div class="about-us-image">
-          <img src="about1.jpg" alt="Real Estate Image">
+          <img src="about2.jpg" alt="Real Estate Image">
         </div>
-      </div>
-    
-      <h1 style="font-family: Inter;
-      font-size: 65px;
-      font-weight: 900;
-      line-height: 77.89px;
-      text-align: center; 
-      color: #164B67;
-      ">Personalized Services for Every Client</h1>
-     <div class="service-card"> 
-        <img src="service6.jpg" alt="Service Image" class="service-image">
+      </div> 
+
+      <div class="service-card"> 
+        <img src="about3.jpg" alt="Service Image" class="service-image">
         <div class="service-content">
            <ul>
-            <li>Expert Guidance from Start to Finish</li> 
-            <li>Comprehensive Market Insights</li>
-            <li>Customised Solutions for Every Goal</li>
-            <li>Transparent Communication</li>
+            <li>Rigorous Quality Control</li> 
+            <li>Sustainable Sourcing Practices</li>
+            <li>Customizable Spice Solutions</li>
+            <li>Global Reach with Local Expertise</li>
+            <li>Commitment to Innovation</li>
+            <li>Your Trusted Spice Partner</li>
            </ul>
         </div>
     </div> 
 
-    <h1 style="font-family: Inter;
-    font-size: 65px;
-    font-weight: 900;
-    line-height: 77.89px;
-    text-align: center; 
-    color: #164B67;
-    ">Local Expertise and Market Insights</h1>
-  
-  <div class="service-card-right">
-    <div class="service-text-left">
-        <p>
-            With our in-depth knowledge <br> of Ahmedabad's real estate <br> market, we provide accurate, <br> up-to-date information on <br> property prices, market trends, <br> and investment opportunities.
-        </p>
+    <div>
+        <img src="process.png" style="margin-left: 50px;">
     </div>
-    <img src="service7.jpg" alt="Service Image" class="service-image-right">
-</div>
-<h1 style="font-family: Inter;
-font-size: 32px;
-font-style: italic;
-font-weight: 700;
-line-height: 38.73px;
-text-align: center; 
-color: #164B67;
-">“Transforming spaces into places you’ll love to live and work. Discover <br> your perfect property with JD Realtors.”</h1>
 
-<div class="about-us-card">
-    <div class="about-us-content">
-      <h2>Our Services</h2>
-      <p>
-        With our in-depth knowledge of Ahmedabad's real estate market, we provide accurate, up-to-date information on property prices, market trends, and investment opportunities. Our close connections with local developers, builders, and landlords give us access to a diverse range of properties, ensuring we can find options that align with your preferences and budget.
-      </p>
-    </div>
-    <div class="about-us-image">
-      <img src="service8.jpg" alt="Real Estate Image">
-    </div>
-  </div>
+    <div class="alternating-card-layout">
+        <div class="alternating-card">
+          <div class="alternating-card-image">
+            <img src="spice6.jpg" alt="Image 1">
+          </div>
+          <div class="alternating-card-content">
+            <h2>Unwavering Focus on Quality</h2>
        
+          </div>
+        </div>
+      
+        <div class="alternating-card reverse">
+          <div class="alternating-card-image">
+            <img src="spice7.jpg" alt="Image 2">
+          </div>
+          <div class="alternating-card-content">
+            <h2>Ethical and Transparent Practices</h2>
+      
+          </div>
+        </div>
+      
+        <div class="alternating-card">
+          <div class="alternating-card-image">
+            <img src="spice8.jpg" alt="Image 3">
+          </div>
+          <div class="alternating-card-content">
+            <h2>Consistent Excellence Across All Operations</h2>
+         
+          </div>
+        </div>
+      </div>
+      
+      <section style="margin-top: 100px;">  
+        <h1 style="font-family: Inter;
+        font-size: 60px;
+        font-weight: 400;
+        line-height: 58.42px;
+        text-align: center; 
+        color: rgba(22, 73, 101, 1);
+        ">Our Range</h1> 
+<img src="spice4.jpeg" alt="Slide Image" id="spice1"> 
+</section>
+
 
 </body>
 </html>
