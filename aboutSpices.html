@@ -9,6 +9,12 @@
     <title>AboutUs</title>
 </head>
 <style>
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+
      header {
             background-color: #F2F2F2;
             padding: 30px 50px; 
@@ -43,6 +49,7 @@
             color: #164B67;
             font-size: 16px;
         }
+        
         .dropdown {
             position: relative;
             display: inline-block;
@@ -76,34 +83,41 @@
             cursor: pointer; /* Pointer cursor on hover */
         } 
         .card {
-            display: flex;
-            align-items: center;
-            border-radius: 8px;
-            padding: 16px;
-            width: 100%;
-        }
-        .card img {
-            width: 299px;
-height: 353px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    padding: 16px; 
+    padding-left: 100px;
+    width: 100%;
+    box-sizing: border-box; /* Include padding in width calculation */ 
+    margin-left: 0;
+}
 
-gap: 0px;
-border-radius: 10px;
-opacity: 0px;
+.card img {
+    width: 299px;
+    height: 353px;
+    gap: 0px;
+    border-radius: 10px;
+    opacity: 1; /* Make visible if needed */
+}
 
+.card-content {
+    flex: 1; /* Take up remaining space */
+    box-sizing: border-box; /* Ensure padding doesn’t cause overflow */
+}
 
-        }
-        .card-content {
-            flex: 1;
-        } 
-        .card-content p{
-            font-family: Inter;
-font-size: 28px;
-font-weight: 500;
-line-height: 33.89px;
-text-align: left; 
-margin-left: 200px;
+.card-content p {
+    font-family: Inter;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 33.89px;
+    text-align: left;
+    margin-left: 0; /* Remove or reduce margin to prevent overflow */
+    padding-left: 20px; /* Add padding for spacing */ 
+    margin-right: 0;
+    box-sizing: border-box; /* Include padding in width */
+}
 
-        }
         #tagline{
             font-family: Inter;
 font-size: 32px;
@@ -233,8 +247,128 @@ text-align: center;
     gap: 0px; 
     opacity: 0px;
 } 
+#process {
+    max-width: 100%; /* Ensure the image never exceeds the container width */
+    height: auto; /* Keep the image aspect ratio */
+    margin-left: auto; /* Center the image by default */
+    margin-right: auto; /* Ensure centering */
+    display: block; /* Remove extra inline space */
+}
+#last{
+  margin-top:  50px;
+}
 
-@media (max-width: 768px) {
+@media (max-width: 768px) { 
+  header {
+    padding: 20px;
+  }
+
+  nav {
+    justify-content: space-between; /* Maintain space between items */
+  }
+
+  nav .menu-icon {
+    display: block; /* Show menu icon on mobile */
+    position: absolute; /* Absolute positioning for the icon */
+    right: 20px; /* Position on the right */
+    top: 20px; /* Center vertically */
+  }
+
+  nav .nav-links {
+    display: none; /* Hide nav links by default */
+    flex-direction: column; /* Stack links vertically */
+    position: absolute; /* Position links absolutely */
+    top: 71px; /* Position below navbar */
+    left: 0; /* Align to left */
+    right: 0; /* Stretch to the right */
+    background-color: #F2F2F2; /* Match background color */
+    padding: 10px 0; /* Add padding */
+    z-index: 1; /* Ensure it appears above other elements */
+    align-items: center; /* Center items horizontally */
+    gap: 5px; /* Reduced space between links */
+  }
+
+  nav .nav-links.active {
+    display: flex; /* Show nav links when active */
+    justify-content: center; /* Center items when displayed */
+  }
+
+  nav a {
+    font-size: 14px; /* Adjust font size for mobile */
+    margin-bottom: 5px; /* Space between links */
+  } 
+
+  .card {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .card img {
+    width: 80%;
+    height: auto;
+    margin: 0 auto 15px auto; 
+  
+    opacity: 1;
+  }
+
+  .card-content p {
+    margin-left: 0;
+    font-size: 18px;
+    line-height: 22px; 
+  
+
+  }  
+
+  .about-us-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-us-image {
+    clip-path: none; /* Remove diagonal cut for mobile */
+    margin: 20px 0;
+  }
+
+  .about-us-image img {
+    width: 100%; /* Make image responsive */
+    height: auto;
+  }
+
+  .about-us-content h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .about-us-content p {
+    font-size: 18px;
+    line-height: 22px;
+  } 
+
+  #process {
+        margin-left: 0; /* Remove extra margin for smaller screens */
+        margin-right: 0; /* Make sure no margin on both sides */
+        width: 100%; /* Ensure full width for small screens */
+    } 
+     .service-card {
+                flex-direction: column; /* Stack items vertically */
+                align-items: flex-start; /* Align items to the start */
+            }
+
+            .service-image {
+                max-width: 100%; /* Make the image take full width */
+                margin-bottom: 20px; /* Add space below the image */
+            }
+
+            .service-content {
+                padding-left: 0; /* Remove left padding */
+            }
+
+            .service-content ul {
+                font-size: 28px; /* Adjust font size for smaller screens */
+                line-height: 36px;
+            }
+
   .alternating-card, .reverse {
     flex-direction: column;
     text-align: center;
@@ -242,12 +376,20 @@ text-align: center;
 
   .alternating-card-content {
     margin-top: 15px;
-    max-width: 100%;
+    max-width: 100%;   
+  }
+  .alternating-card-content h2{
+    font-size: 60px;
+    margin-left: 1px;
   }
 
   .alternating-card-image img {
     width: 100%;
-    max-width: 320px;
+    max-width: 320px; 
+    margin-left: 5px;
+  }  
+  #last{
+    margin-top: 1px;
   }
 } 
 
@@ -335,7 +477,7 @@ text-align: center;
     </div> 
 
     <div>
-        <img src="process.png" style="margin-left: 50px;">
+        <img src="process.png"  id="process">
     </div>
 
     <div class="alternating-card-layout">
@@ -370,17 +512,13 @@ text-align: center;
         </div>
       </div>
       
-      <section style="margin-top: 100px;">  
-        <h1 style="font-family: Inter;
-        font-size: 60px;
-        font-weight: 400;
-        line-height: 58.42px;
-        text-align: center; 
-        color: rgba(22, 73, 101, 1);
-        ">Our Range</h1> 
-<img src="spice4.jpeg" alt="Slide Image" id="spice1"> 
-</section>
 
+</body> 
+<script>
+  function toggleMenu() {
+  const navLinks = document.getElementById('navLinks');
+  navLinks.classList.toggle('active'); // Toggle active class to show/hide links
+}
 
-</body>
+</script> 
 </html>

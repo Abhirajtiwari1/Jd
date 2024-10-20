@@ -44,7 +44,7 @@
         }
         nav img {
             width: 129px;
-            height: 144px;
+            height: 140px;
             position: absolute;
             left: 20px;
         }
@@ -93,7 +93,7 @@
       padding: 20px;
       height: auto; /* Adjust to fit content */
       min-height: 300px; 
-      margin-top: 10px;
+     margin-top: 3px;
     }
 
     .spice-content {
@@ -133,8 +133,20 @@ opacity: 0px;
       aspect-ratio: 1 / 1; /* Adjust the aspect ratio to ensure it remains balanced */
     }
 
+    .info {
+    max-width: 100%; /* Adjust width for better readability */
+    margin: 0 50px; /* Center the text horizontally */
+    padding: 10px; /* Adjust padding for a tighter fit */
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6; /* Adjust line height for better readability */
+}
 
-
+#info {
+    font-size: 32px; /* Slightly smaller font for a compact look */
+    text-align: left; /* Keep text left-aligned */
+    color: #000; /* Set text color */
+    word-wrap: break-word; /* Ensure long words are properly handled */
+}
 
         #About div {
             width: 100%;
@@ -240,7 +252,7 @@ opacity: 0px;
 #spice1{
     width: 100%; 
     height: auto; 
-    top: 179px; 
+margin-top: 10px;
     gap: 0px; 
     opacity: 0px;
 } 
@@ -277,12 +289,25 @@ nav .menu-icon {
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             grid-gap: 20px;
             padding: 20px; 
-            background-color: #B4DCEA;
+            background-color: #B4DCEA; 
+            margin-top: 10px;
         }
 
         .instagram-post {
             max-width: 100%; 
-        }
+        } 
+        #text{
+            font-family: Inter;
+font-size: 48px;
+font-weight: 400;
+line-height: 58.42px;
+text-align: center; 
+color: rgba(22, 73, 101, 1); 
+margin-top: 30px;
+        } 
+#range{
+    margin-top: 100px;
+}
     /* Media Query for Mobile Devices */
     @media (max-width: 768px) { 
        
@@ -352,8 +377,82 @@ nav .menu-icon {
         margin-bottom: 20px; /* Space between posts in column view */
         max-width: 100%; /* Make sure the post does not exceed the viewport width */
     }
-        
+    .spice-section {
+                flex-direction: column;
+                align-items: center; 
+            
+            }
 
+            /* Show the image first by adjusting order */
+            .spice-image {
+                width: 100%;
+                margin-top: 20px;
+                order: -1; /* This makes the image appear first */
+            }
+
+            .spice-content {
+                max-width: 100%;
+                margin-left: 0;
+                text-align: center;
+            }
+
+            .spice-content p {
+                font-size: 28px; /* Adjust font size for mobile */
+                line-height: 36px;
+                margin-left: 0;
+                margin-bottom: 20px;
+            }
+
+            .spice-button {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+            .info {
+        max-width: 100%; /* Make the container full-width on mobile */
+        padding: 10px; /* Reduce padding to save space */
+        margin-top: 50px; 
+    
+    }
+
+    #info {
+        font-size: 16px; /* Slightly reduce font size for mobile */
+         /* Justify the text for better appearance */
+        line-height: 38.95px; /* Adjust line height for readability */ 
+        font-weight: 400;
+    }
+    #text{
+            font-size: 30px; 
+          
+        } 
+        .image-text-section {
+                flex-direction: column; /* Stack image and text vertically */
+                align-items: center;
+            }
+
+            .image-text-section img {
+                width: 90%; /* Make image take full width on mobile */
+                height: auto; /* Adjust height automatically */ 
+                margin-bottom: 20px;
+            }
+
+            .text-content {
+                width: 100%; /* Make text content take full width on mobile */ 
+                padding: 10px;
+                text-align: center; /* Center the text */
+            }
+
+            .text-content li {
+                font-size: 20px; /* Reduce font size for smaller screens */
+            }
+
+            .text-content button {
+                margin-top: 5px; /* Reduce margin on mobile */
+            } 
+            nav img{
+                height: 120px;
+                width: 120px;
+            }
+        
         
     } 
 
@@ -371,13 +470,15 @@ nav .menu-icon {
         }
         #Why{
             font-size: 35px;
-            margin-top: 30px;
+            margin-top: 35px;
         }
         #cumin{
             font-size: 25px;
             margin-top: 50px;
             line-height: 30px;
-        }
+        } 
+        
+       
        
 }
 
@@ -435,22 +536,17 @@ nav .menu-icon {
         </div>
         <div class="spice-image"></div>
       </div>
-
-<p style="font-family: Inter;
-font-size: 32px;
-font-weight: 400;
-line-height: 38.95px;
-text-align: left;
-margin-top: 50px;
-margin-left: 250px;
-">At JD International, we take pride in our deep-rooted expertise in spice <br> cultivation, processing, and export. We are committed to maintaining the <br> highest standards of quality and consistency across our entire product range. <br> Our comprehensive spice lineup includes cumin, coriander, fennel, and a variety <br> of other high-demand spices, carefully sourced and processed to preserve their <br> rich flavours and aromas.
+<div class="info">
+    <p id="info">At JD International, we take pride in our deep-rooted expertise in spice <br> cultivation, processing, and export. We are committed to maintaining the <br> highest standards of quality and consistency across our entire product range. <br> Our comprehensive spice lineup includes cumin, coriander, fennel, and a variety <br> of other high-demand spices, carefully sourced and processed to preserve their <br> rich flavours and aromas.
 </p>
+</div>
+
 
 
 <section id="About">
     <h1 id="Why">WHY CHOOSE US ?</h1>
     <div class="why-choose-us">
-        <img src="spice5.png" alt="Image 1"  id="spice5">
+        <img src="Group 320.png" alt="Image 1"  id="spice5">
         <div class="text-content">
             <p style="font-family: Inter;
             font-size: 30px;
@@ -462,17 +558,10 @@ margin-left: 250px;
             </p>
         </div>
     </div>   
-<h1 style="font-family: Inter;
-font-size: 48px;
-font-weight: 400;
-line-height: 58.42px;
-text-align: center; 
-color: rgba(22, 73, 101, 1); 
-margin-top: 30px;
-">JD INTERNATIONAL IS TO PROVIDE HIGH QUALITY , <br> BEST TASTE AND NATURAL PRODUCTS</h1>
+<h1 id="text">JD INTERNATIONAL IS TO PROVIDE HIGH QUALITY , <br> BEST TASTE AND NATURAL PRODUCTS</h1>
 <div class="image-text-section" style="display: flex; align-items: center; margin-top: 50px;">
     <img src="cumin.jpg" alt="Descriptive Alt Text" style="width: 606px;
-    height: 496px;
+    height: auto;
     gap: 0px;
     border-radius: 20px;
     opacity: 0px;
@@ -501,14 +590,14 @@ margin-top: 30px;
     </div>
     
 </div>
-    <section style="margin-top: 100px;">  
+    <section id="range">  
         <h1 style="font-family: Inter;
         font-size: 60px;
         font-weight: 400;
         line-height: 58.42px;
         text-align: center; 
         color: rgba(22, 73, 101, 1);
-        ">Our Range</h1> 
+        " >Our Range</h1> 
 <img src="spice4.jpeg" alt="Slide Image" id="spice1"> 
 </section>
     <p id="About1">
@@ -521,9 +610,9 @@ margin-top: 30px;
     font-size: 48px;
     font-weight: 200;
     line-height: 58.42px;
-    text-align: center; color: #164B67;
+    text-align: center; color: #164B67; margin-top: 20px;
     ">Stay in touch on Instagram</h1> 
-  <div class="instagram-container">
+  <div class="instagram-container" >
     <!-- First Instagram Post Embed -->
     <div class="instagram-post">
         <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DAl5uaxPxSg/" data-instgrm-version="12" style="width: 100%;"></blockquote>

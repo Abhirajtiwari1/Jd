@@ -7,239 +7,389 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <title>About Us</title>
-    <style> 
- header {
-            background-color: #F2F2F2;
-            padding: 30px 50px; 
-            font-family: 'Inter', Courier, monospace;
-        }
-        .navbar-container {
-            width: 100%;
-            height: 100px;
-            position: relative;
-        }
-        nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: relative;
-            width: 100%;
-            height: 100%;
-        }
-        nav img {
-            width: 150px;
-            height: 170px;
-            position: absolute;
-            left: 20px; 
-        }
-        nav div {
-            display: flex;
-            gap: 100px;
-            margin: auto;
-        }
-        nav a { 
-            text-decoration: none;
-            color: #164B67;
-            font-size: 16px;
-        }
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #14A0D2;
-            z-index: 1; 
-            border-radius: 12px; 
-            width: 217px;
-            height: 300px;
-        }
-        .dropdown-content a {
-            color: white;
-            padding: 12px;
-            text-decoration: none;
-            display: block; 
-            font-family: Inter;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 19.36px;
-            text-align: left;
-        }
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        nav .menu-icon {
-            display: none; /* Hide menu icon on desktop */
-            font-size: 24px; /* Icon size */
-            cursor: pointer; /* Pointer cursor on hover */
-        } 
+  <style>
+    *{
+  box-sizing: border-box;
+} 
+body{
+  margin: 0;
+  overflow-x: hidden;
+}
+header {
+        background-color: #F2F2F2;
+        padding: 30px 50px; 
+        font-family: 'Inter', Courier, monospace;
+    }
+    .navbar-container {
+        width: 100%;
+        height: 100px;
+        position: relative;
+    }
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    #logo {
+        width: 150px;
+        height: 170px;
+        position: absolute;
+        left: 20px; 
+    }
+    nav div {
+        display: flex;
+        gap: 100px;
+        margin: auto;
+    }
+    nav a { 
+        text-decoration: none;
+        color: #164B67;
+        font-size: 16px;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #14A0D2;
+        z-index: 1; 
+        border-radius: 12px; 
+        width: 217px;
+        height: 300px;
+    }
+    .dropdown-content a {
+        color: white;
+        padding: 12px;
+        text-decoration: none;
+        display: block; 
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.36px;
+        text-align: left;
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    nav .menu-icon {
+        display: none; /* Hide menu icon on desktop */
+        font-size: 24px; /* Icon size */
+        cursor: pointer; /* Pointer cursor on hover */
+    }
 
 
 
 
-        .card {
-            display: flex;
-            align-items: center;
-            border-radius: 8px;
-            padding: 16px;
-            width: 100%;
-        }
-        .card img {
-            width: 299px;
-height: 353px;
+    .card {
+        display: flex;
+        align-items: center;
+        border-radius: 8px;
+        padding: 16px;
+        width: 100%;
+    }
+.card img {
+        width: 299px;
+        height: 353px;
+        gap: 0px;
+        border-radius: 10px;
+        opacity: 0;
 
-gap: 0px;
-border-radius: 10px;
-opacity: 0px;
 
-
-        }
-        .card-content {
-            flex: 1;
-        } 
-        .card-content p{
-            font-family: Inter;
+    }
+    .card-content {
+        flex: 1;
+    } 
+    .card-content p{
+        font-family: Inter;
 font-size: 28px;
 font-weight: 500;
 line-height: 33.89px;
 text-align: left; 
 margin-left: 200px;
 
-        } 
-        #tagline{
-            font-family: Inter;
+    } 
+    #tagline{
+        font-family: Inter;
 font-size: 32px;
 font-style: italic;
 font-weight: 700;
 line-height: 38.73px;
 text-align: center;
 color: #164B67;
-        }
-        .about-us-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #f9f9f9;
-  padding: 20px;
+    }
+    .about-us-card {
+display: flex;
+align-items: center;
+justify-content: space-between;
+background-color: #f9f9f9;
+padding: 20px;
 }
 
 .about-us-content {
-  flex: 1;
-  padding: 20px;
+flex: 1;
+padding: 20px;
 }
 
 .about-us-image {
-  position: relative;
-  flex: 1;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
-  /* You can adjust the 20% to get a sharper or smoother diagonal cut */
+position: relative;
+flex: 1;
+clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+/* You can adjust the 20% to get a sharper or smoother diagonal cut */
 }
 
 .about-us-image img {
-  width: 756.5px;
-  height: 514px;
-  display: block;
+width: 756.5px;
+height: 514px;
+display: block;
 } 
 .about-us-content p{
-    font-family: Inter;
+font-family: Inter;
 font-size: 20px;
 font-weight: 400;
 line-height: 24.2px;
 text-align: left;
 }
 .about-us-content h2{
-    font-family: Inter;
+font-family: Inter;
 font-size: 40px;
 font-weight: 700;
 line-height: 48.41px;
 text-align: left;
 text-decoration: underline;
 }
- .service-card {
-  display: flex; /* Use Flexbox to align items horizontally */
-  align-items: center; /* Aligns the items vertically in the middle */
-  justify-content: space-between; /* Ensures even space between the image and the text */
-  padding: 20px;
+.service-card {
+display: flex; /* Use Flexbox to align items horizontally */
+align-items: center; /* Aligns the items vertically in the middle */
+justify-content: space-between; /* Ensures even space between the image and the text */
+padding: 20px;
 } 
 
 
 .service-image {
-  max-width: 40%; /* Control the width of the image */
-  height: auto;
-  border-radius: 8px; /* Optional: To give the image rounded corners */
+max-width: 40%; /* Control the width of the image */
+height: auto;
+border-radius: 8px; /* Optional: To give the image rounded corners */
 }
 
 .service-content {
-  flex: 1; /* Take up the remaining space for the content */
-  padding-left: 20px; /* Add space between the image and text */
+flex: 1; /* Take up the remaining space for the content */
+padding-left: 20px; /* Add space between the image and text */
 }
 .service-content ul{
-    font-family: Inter;
+font-family: Inter;
 font-size: 38px;
 font-weight: 300;
 line-height: 46.25px;
 }
 .service-card-right {
-  display: flex; /* Align items horizontally */
-  align-items: center; /* Vertically align in the center */
-  justify-content: space-between; /* Ensure space between the text and image */
-  padding: 20px;
+display: flex; /* Align items horizontally */
+align-items: center; /* Vertically align in the center */
+justify-content: space-between; /* Ensure space between the text and image */
+padding: 20px;
 
 }
 
 .service-text-left {
-  flex: 1; /* Take up the remaining space */
-  padding-right: 20px; /* Add space between text and image */
+flex: 1; /* Take up the remaining space */
+padding-right: 20px; /* Add space between text and image */
 }
 
 .service-image-right {
-  max-width: 40%; /* Control image size */
-  height: auto;
-  border-radius: 8px; /* Optional: Smooth corners for image */
+max-width: 40%; /* Control image size */
+height: auto;
+border-radius: 8px; /* Optional: Smooth corners for image */
 }
 
 .service-text-left p {
-    font-family: Inter;
+font-family: Inter;
 font-size: 38px;
 font-weight: 300;
 line-height: 46.25px;
 margin-left: 149px;
+}
+nav .menu-icon {
+display: none; /* Hide menu icon on desktop */
+font-size: 24px; /* Icon size */
+cursor: pointer; /* Pointer cursor on hover */
+} 
 
-
-
+.same{
+font-family: Inter;
+font-size: 65px;
+font-weight: 900;
+line-height: 77.89px;
+text-align: center; 
+color: #164B67;
+}
+@media (max-width: 768px) {
+nav {
+    justify-content: space-between; /* Maintain space between items */
 }
 
+nav .menu-icon {
+    display: block; /* Show menu icon on mobile */
+    position: absolute; /* Absolute positioning for the icon */
+    right: 20px; /* Position on the right */
+    top: 20px; /* Center vertically */
+}
 
+nav .nav-links {
+    display: none; /* Hide nav links by default */
+    flex-direction: column; /* Stack links vertically */
+    position: absolute; /* Position links absolutely */
+    top: 71px; /* Position below navbar */
+    left: 0; /* Align to left */
+    right: 0; /* Stretch to the right */
+    background-color: #F2F2F2; /* Match background color */
+    padding: 10px 0; /* Add padding */
+    z-index: 1; /* Ensure it appears above other elements */
+    align-items: center; /* Center items horizontally */
+    gap: 5px; /* Reduced space between links */
+}
 
-    </style>
+nav .nav-links.active {
+    display: flex; /* Show nav links when active */
+    justify-content: center; /* Center items when displayed */
+}
+
+nav a {
+    font-size: 14px; /* Adjust font size for mobile */
+    margin-bottom: 5px; /* Space between links */
+}  
+#logo{
+  margin-left: 0;
+}
+}
+/* Media query for tablets and smaller screens */
+@media only screen and (max-width: 768px) {
+        .card {
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .card img {
+            width: 80%;
+            height: auto;
+            margin: 0 auto 15px auto;
+            opacity: 1;
+        }
+
+        .card-content p {
+            margin-left: 0;
+            font-size: 22px;
+            line-height: 28px;
+        } 
+        .about-us-card {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .about-us-image {
+            clip-path: none; /* Remove diagonal cut for mobile */
+            margin: 20px 0;
+        }
+
+        .about-us-image img {
+            width: 100%; /* Make image responsive */
+            height: auto;
+        }
+
+        .about-us-content h2 {
+            font-size: 32px;
+            line-height: 40px;
+        }
+
+        .about-us-content p {
+            font-size: 18px;
+            line-height: 22px;
+        } 
+        .service-card,
+        .service-card-right {
+            flex-direction: column; /* Switch to column layout */
+            align-items: flex-start; /* Align items to the start */
+        }
+
+        .service-image {
+            max-width: 100%; /* Full width on small screens */
+            margin-bottom: 20px; /* Space below the image */
+        } 
+        .service-image-right{
+            max-width: 100%; /* Full width on small screens */
+            margin-bottom: 20px;
+        }
+
+        .service-content {
+            padding-left: 0; /* Remove padding for mobile */
+        }
+
+        h1 {
+            font-size: 40px; /* Smaller font size for headers */
+            line-height: 40px; /* Adjust line height */
+        }
+
+        .service-content ul {
+            font-size: 30px; /* Smaller font size for list items */
+            line-height: 40px; /* Adjust line height */ 
+            margin-left: 10px;
+        } 
+        .service-text-left p {
+            font-size: 35px;
+            text-align: left;   
+         margin: 0;
+            
+     } 
+      .service-text-left p br{
+        display: none;
+     } 
+    .same{
+        font-size: 40px;
+        line-height: 40px;
+    } 
+
+    }
+
+    /* Media query for mobile screens */
+    @media only screen and (max-width: 480px) {
+        .card img {
+            width: 80%;
+            height: 320px;
+        }
+
+        .card-content p {
+            font-size: 18px;
+            line-height: 24px;
+            padding: 0 10px;
+        } 
+        .about-us-content h2 {
+            font-size: 28px;
+            line-height: 35px;
+        }
+
+        .about-us-content p {
+            font-size: 16px;
+            line-height: 20px;
+        } 
+
+}
+  </style>
 </head>
 <body> 
     <header>
         <div class="navbar-container">
             <nav>
-                <img src="logo.jpeg" alt="Logo" style="border-radius: 100%;">
+                <img src="logo.jpeg" alt="Logo" style="border-radius: 100%;" id="logo">
                 <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger menu icon -->
                 <div class="nav-links" id="navLinks" style="border-radius: 10px;
                 ;"> <!-- Container for nav links -->
-                    <div class="dropdown">
+                  
                         <a href="#">About Us</a>
-                        <div class="dropdown-content" style="height: 400px;">
-                            <a href="#">Our Purpose</a>
-                            <hr style="width: 75px; margin-left: 10px;">
-                            <a href="#">Our Values</a>
-                            <hr style="width: 75px; margin-left: 10px;">
-                            <a href="#">What we do</a>
-                            <hr style="width: 75px; margin-left: 10px;">
-                            <a href="#">Why Choose us?</a>
-                            <hr style="width: 100px; margin-left: 10px;">
-                            <a href="#">Contract Manufacturing</a>
-                            <hr style="width: 100px; margin-left: 10px;">
-                            <a href="#">Board of Director</a>
-                            <hr style="width: 100px; margin-left: 10px;">
-                            <a href="#">Join Our Team</a>
-                        </div>
-                    </div>
+                       
                     <div class="dropdown">
                         <a href="services.html">Our Services</a>
                         <div class="dropdown-content" style="height: 400px;">
@@ -284,13 +434,7 @@ margin-left: 149px;
         </div>
       </div>
     
-      <h1 style="font-family: Inter;
-      font-size: 65px;
-      font-weight: 900;
-      line-height: 77.89px;
-      text-align: center; 
-      color: #164B67;
-      ">Personalized Services for Every Client</h1>
+      <h1 class="same">Personalized Services for Every Client</h1>
      <div class="service-card"> 
         <img src="service6.jpg" alt="Service Image" class="service-image">
         <div class="service-content">
@@ -303,13 +447,8 @@ margin-left: 149px;
         </div>
     </div> 
 
-    <h1 style="font-family: Inter;
-    font-size: 65px;
-    font-weight: 900;
-    line-height: 77.89px;
-    text-align: center; 
-    color: #164B67;
-    ">Local Expertise and Market Insights</h1>
+    <h1 
+     class="same">Local Expertise and Market Insights</h1>
   
   <div class="service-card-right">
     <div class="service-text-left">
@@ -331,7 +470,7 @@ color: #164B67;
 <div class="about-us-card">
     <div class="about-us-content">
       <h2>Our Services</h2>
-      <p>
+      <p id="same">
         With our in-depth knowledge of Ahmedabad's real estate market, we provide accurate, up-to-date information on property prices, market trends, and investment opportunities. Our close connections with local developers, builders, and landlords give us access to a diverse range of properties, ensuring we can find options that align with your preferences and budget.
       </p>
     </div>
@@ -341,5 +480,12 @@ color: #164B67;
   </div>
        
 
-</body>
+</body> 
+<script>
+  function toggleMenu() {
+  const navLinks = document.getElementById('navLinks');
+  navLinks.classList.toggle('active'); // Toggle active class to show/hide links
+}
+
+</script>
 </html>
