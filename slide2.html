@@ -414,10 +414,56 @@ text-align: left;
 
             .info-card-image, .info-card-text {
                 padding: 8px;
+            } 
+
+            .start img {
+                height: 100vh; /* Full screen height for mobile */
+                object-fit: cover; /* Ensure image fits the screen without distortion */
+            }
+
+            .start-card {
+        width: 90%; /* Adjust this percentage to reduce/increase card width */
+        height: 250px; /* This controls the height */
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        margin-right: 0;
+        padding: 10px;
+        background-color: white;
+    }
+
+            #start-image {
+                width: 100px;
+                height: 200px;
+                margin-left: 0;
+            }
+
+            #start-btn {
+                width: 150px;
+                height: 50px;
             }
 }
 
+@media (max-width: 480px) {
+            .start-card {
+        width: 95%; /* Adjust this percentage for smaller screens */
+        height: 250px; /* This controls the height */
+        padding: 5px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
 
+            #start-image {
+                width: 80px;
+                height: 90px;
+            }
+
+            #start-btn {
+                width: 130px;
+                height: 45px;
+            }
+        }
 
 
     </style>
