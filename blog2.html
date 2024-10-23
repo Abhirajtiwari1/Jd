@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Blogs</title>
     <style>
         * {
@@ -180,7 +181,7 @@
     <header>
         <div class="navbar-container">
             <nav>
-                <img src="logo.jpeg" alt="Logo">
+                <img src="spices.jpg" alt="Logo">
                 <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger menu icon -->
                 <div class="nav-links" id="navLinks" style="border-radius: 10px;
                 ;"> <!-- Container for nav links -->
@@ -196,7 +197,7 @@
             </nav>
         </div>
     </header>
-    <section id="blog">
+    <section id="blog" data-aos="zoom-in">
         <div class="card">
             <img src="spice1.png" alt="Blog 1"> 
             <div class="card-content">
@@ -299,5 +300,9 @@
     navLinks.classList.toggle('active'); // Toggle active class to show/hide links
 }
 
+</script> 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
 </script>
 </html>

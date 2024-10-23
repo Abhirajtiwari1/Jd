@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet"> 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title> Services</title> 
     <style>
         body {
@@ -201,6 +202,99 @@
         .instagram-post {
             max-width: 100%; 
         }  
+        footer {
+  background-color: #08485E;
+  color: #fff;
+  padding: 30px 10px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-evenly; /* Keep the left and right containers closer */
+  align-items: center; /* Vertically center the content */
+  flex-wrap: wrap;
+}
+
+.footer-left, .footer-right {
+  max-width: 40%; /* Keep them closer together */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content inside each container */
+}
+
+.footer-left {
+  text-align: center; /* Text centered for the left container */
+}
+
+.footer-left .logo {
+  width: 204px;
+height: 203px;
+gap: 0px;
+border-radius: 28px;
+opacity: 0px;
+margin-bottom: 20px;
+}
+
+.footer-left h2 {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.footer-left .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-left p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.footer-right {
+  align-items: flex-start; /* Ensure the content stays centered but text aligns left */
+  text-align: left; /* Left-align text for the right container */
+}
+
+.footer-right h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.footer-right a {
+  display: block;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  margin: 20px 0;
+}
+
+.footer-right a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  border-top: 1px solid #fff;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+} 
+@media (max-width: 480px) {
+  .footer-left h2 {
+    font-size: 18px; /* Further reduce font size */
+  }
+
+  .footer-left p,
+  .footer-right h3,
+  .footer-right a {
+    font-size: 12px; /* Further adjust font sizes */
+  }
+} 
         @media (max-width: 768px) { 
     /* Navbar styles for mobile */
     nav {
@@ -302,7 +396,41 @@
     } 
    .card-content p{
     font-size: 20px;
-   }
+   } 
+   footer {
+    padding: 20px 5px; /* Reduce padding on smaller screens */
+  }
+
+  .footer-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align content */
+  }
+
+  .footer-left,
+  .footer-right {
+    max-width: 100%; /* Allow full width */
+    text-align: center; /* Center align text */
+    margin-bottom: 20px; /* Add space between sections */
+  }
+
+  .footer-left .logo {
+    width: 150px; /* Adjust logo size */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .footer-left h2 {
+    font-size: 20px; /* Reduce font size */
+  }
+
+  .footer-left p,
+  .footer-right h3,
+  .footer-right a {
+    font-size: 14px; /* Adjust font sizes */
+  }
+
+  .footer-right {
+    align-items: center; /* Center align items */
+  }
 }
 
 
@@ -342,51 +470,86 @@
     </header>
 
     <section id="about">
-        <h1 id="aboutUs">OUR SERVICES</h1>  
+        <h1 id="aboutUs" data-aos="zoom-in">OUR SERVICES</h1>  
         <div class="card-section">
             <div class="card">
-                <img src="service1.jpg" alt="Image 1" id="service1-img">
-                <div class="card-content">
+                <img src="service1.jpg" alt="Image 1" id="service1-img" data-aos="fade-right">
+                <div class="card-content" data-aos="fade-left">
                     <h2>Exclusive Access to <br> Prime Properties</h2>
                     <p>At JD REALTORS, our strong relationships with key players in Ahmedabad's real estate landscape enable <br> us to offer exclusive access to some of the most <br> sought-after properties in the city. From luxury apartments in prestigious neighbourhoods to <br> affordable housing options and commercial spaces,<br> we can present you with options that are often unavailable on the open market.</p>
                 </div>
             </div>
             <div class="card">
-                <img src="service2.jpg" alt="Image 2" id="service2-img">
-                <div class="card-content">
+                <img src="service2.jpg" alt="Image 2" id="service2-img" data-aos="fade-left">
+                <div class="card-content" data-aos="fade-right">
                     <h2>Tailored Investment <br> Opportunities</h2>
                     <p> Whether you're a first-time buyer looking to secure a family home or an investor seeking high-yield opportunities, our team will help you identify the best properties for your needs. We evaluate potential investments based on current market conditions, projected growth, and rental yields to ensure your portfolio thrives.</p>
                 </div>
             </div>
             <div class="card">
-                <img src="service3.jpg" alt="Image 3" id="service3-img">
-                <div class="card-content">
+                <img src="service3.jpg" alt="Image 3" id="service3-img" data-aos="fade-right">
+                <div class="card-content" data-aos="fade-left">
                     <h2>Expert Negotiation for <br> Maximum Value</h2>
                     <p>With our deep understanding of the local market and extensive experience in real estate negotiations, we ensure that you get the best value for your investment. Our team takes pride in securing favourable terms for our clients, whether you're buying, selling, or leasing a property.</p>
                 </div>
             </div>
             <div class="card">
-                <img src="service4.jpg" alt="Image 4" id="service4-img" >
-                <div class="card-content">
+                <img src="service4.jpg" alt="Image 4" id="service4-img" data-aos="fade-left">
+                <div class="card-content" data-aos="fade-right">
                     <h2 id="personalised">Personalised <br> Recommendations <br> Based on Your Needs</h2>
                     <p>We take the time to understand your unique preferences, lifestyle, and financial goals, offering personalised property recommendations that perfectly align with your vision. Whether you're looking for a modern apartment with all the latest amenities or a spacious home in a quiet neighbourhood, we'll guide you to the right choice.</p>
                 </div>
             </div> 
             <div class="card">
-                <img src="service5.jpg" alt="Image 4" id="service5-img" >
-                <div class="card-content">
+                <img src="service5.jpg" alt="Image 4" id="service5-img" data-aos="fade-right">
+                <div class="card-content" data-aos="fade-left">
                     <h2>Long-Term Support <br> and Guidance</h2>
                     <p>Our commitment to you doesn't end at closing. We provide ongoing support to help you with any real estate needs that arise after your transaction is complete. Whether it's managing rental properties, assisting with future investments, or keeping you updated on market trends, we're here for the long term.</p>
                 </div>
             </div> 
         </div>
     </section> 
-    <h1 id="tagline"> We Don’t Just Sell Houses,<br>
+    <h1 id="tagline" data-aos="zoom-in"> We Don’t Just Sell Houses,<br>
         We Match Souls with Spaces</h1>   
     <div class="img">
         <img src="img.jpeg" alt="Image" id="location">
     </div> 
 
+    <footer>
+        <div class="footer-container">
+          <div class="footer-left">
+            <img src="combinedLogo.jpeg" alt="JD Realtors Logo" class="logo">
+            <h2>Let Us <br><strong>Connect!</strong></h2>
+            <div class="social-icons">
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+              <a href="#"><i class="fa fa-x"></i></a>
+              <a href="#"><i class="fa fa-envelope"></i></a>
+            </div>
+            <p><strong>Address</strong><br>Somnath Estate, Pali Rd, Unava,<br>Unjha - 384160</p>
+            <p><strong>Email:<br></strong> Jdrealtorsgroup@Gmail.Com</p>
+            <p><strong>Contact No:<br></strong> +91 9512803016</p>
+          </div>
+      
+          <div class="footer-right">
+            <div class="footer-links">
+              <h3 style="text-decoration: underline;">About Us</h3>
+              <a href="#">About JD Realtors</a>
+              <a href="#">Our Mission</a>
+              <a href="#">Our Vision</a>
+              <a href="#">Value We Provide</a>
+            </div>
+            <div class="footer-links">
+              <h3 style="text-decoration: underline;">Our Services</h3>
+              <a href="#" style="text-decoration: underline;">Our Technologies</a>
+              <a href="#" style="text-decoration: underline;">Industries</a>
+              <a href="#" style="text-decoration: underline;">Blogs</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p style="margin-left: 1px;">Copyright</p>
+        </div>
+      </footer>
   
 </body> 
 <script async src="https://www.instagram.com/embed.js"></script> 
@@ -396,5 +559,9 @@
     navLinks.classList.toggle('active'); // Toggle active class to show/hide links
 }
 
-</script>
+</script> 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
 </html>

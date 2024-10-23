@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Blogs</title>
     <style>
         * {
@@ -236,7 +237,7 @@
             </nav>
         </div>
     </header>
-    <section id="blog">
+    <section id="blog" data-aos="zoom-in">
         <div class="card">
             <img src="blog1.png" alt="Blog 1"> 
             <p>Uncategorized <br> / November 19, 2021</p> 
@@ -268,4 +269,8 @@
 }
 
 </script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
 </html>

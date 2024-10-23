@@ -6,7 +6,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet"> 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <title>Spices</title>
     <style>
        html, body {
@@ -307,7 +309,93 @@ margin-top: 30px;
         } 
 #range{
     margin-top: 100px;
+} 
+
+footer {
+  background-color: #08485E;
+  color: #fff;
+  padding: 30px 10px;
+  font-family: Arial, sans-serif;
 }
+
+.footer-container {
+  display: flex;
+  justify-content: space-evenly; /* Keep the left and right containers closer */
+  align-items: center; /* Vertically center the content */
+  flex-wrap: wrap;
+}
+
+.footer-left, .footer-right {
+  max-width: 40%; /* Keep them closer together */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content inside each container */
+}
+
+.footer-left {
+  text-align: center; /* Text centered for the left container */
+}
+
+.footer-left .logo {
+  width: 204px;
+height: 203px;
+gap: 0px;
+border-radius: 28px;
+opacity: 0px;
+margin-bottom: 20px;
+}
+
+.footer-left h2 {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.footer-left .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-left p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.footer-right {
+  align-items: flex-start; /* Ensure the content stays centered but text aligns left */
+  text-align: left; /* Left-align text for the right container */
+}
+
+.footer-right h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.footer-right a {
+  display: block;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  margin: 20px 0;
+}
+
+.footer-right a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  border-top: 1px solid #fff;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+}
+
+
+
     /* Media Query for Mobile Devices */
     @media (max-width: 768px) { 
        
@@ -452,7 +540,46 @@ margin-top: 30px;
                 height: 120px;
                 width: 120px;
             }
-        
+        #info br {
+            display: none;
+        } 
+      .br{
+        display: none;
+      } 
+      footer {
+    padding: 20px 5px; /* Reduce padding on smaller screens */
+  }
+
+  .footer-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align content */
+  }
+
+  .footer-left,
+  .footer-right {
+    max-width: 100%; /* Allow full width */
+    text-align: center; /* Center align text */
+    margin-bottom: 20px; /* Add space between sections */
+  }
+
+  .footer-left .logo {
+    width: 150px; /* Adjust logo size */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .footer-left h2 {
+    font-size: 20px; /* Reduce font size */
+  }
+
+  .footer-left p,
+  .footer-right h3,
+  .footer-right a {
+    font-size: 14px; /* Adjust font sizes */
+  }
+
+  .footer-right {
+    align-items: center; /* Center align items */
+  }
         
     } 
 
@@ -477,7 +604,15 @@ margin-top: 30px;
             margin-top: 50px;
             line-height: 30px;
         } 
-        
+        .footer-left h2 {
+    font-size: 18px; /* Further reduce font size */
+  }
+
+  .footer-left p,
+  .footer-right h3,
+  .footer-right a {
+    font-size: 12px; /* Further adjust font sizes */
+  }
        
        
 }
@@ -488,7 +623,7 @@ margin-top: 30px;
     <header style="width: 100%;">
         <div class="navbar-container">
             <nav>
-                <img src="logo.jpeg" alt="Logo" style="border-radius: 100%;">
+                <img src="spices.jpg" alt="Logo" style="border-radius: 100%;">
                 <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger menu icon -->
                 <div class="nav-links" id="navLinks" style="border-radius: 10px;
                 ;"> <!-- Container for nav links -->
@@ -514,49 +649,49 @@ margin-top: 30px;
         </div>
     </header>  
 
-    <div class="spice-section">
+    <div class="spice-section" data-aos="zoom-in">
         <div class="spice-content">
-        <p >From traditional favorites to unique <br> blends, our spices are designed to <br> meet the needs of both home cooks<br> and professional chefs.</p>
+        <p>From traditional favorites to unique <br> blends, our spices are designed to <br> meet the needs of both home cooks<br> and professional chefs.</p>
           <button class="spice-button">More Spices</button>
         </div>
         <div class="spice-image"></div>
       </div>
 <div class="info">
-    <p id="info">At JD International, we take pride in our deep-rooted expertise in spice <br> cultivation, processing, and export. We are committed to maintaining the <br> highest standards of quality and consistency across our entire product range. <br> Our comprehensive spice lineup includes cumin, coriander, fennel, and a variety <br> of other high-demand spices, carefully sourced and processed to preserve their <br> rich flavours and aromas.
+    <p id="info" data-aos="zoom-in">At JD International, we take pride in our deep-rooted expertise in spice <br> cultivation, processing, and export. We are committed to maintaining the <br> highest standards of quality and consistency across our entire product range. <br> Our comprehensive spice lineup includes cumin, coriander, fennel, and a variety <br> of other high-demand spices, carefully sourced and processed to preserve their <br> rich flavours and aromas.
 </p>
 </div>
 
 
 
 <section id="About">
-    <h1 id="Why">WHY CHOOSE US ?</h1>
+    <h1 id="Why" data-aos="zoom-in">WHY CHOOSE US ?</h1>
     <div class="why-choose-us">
-        <img src="Group 320.png" alt="Image 1"  id="spice5">
-        <div class="text-content">
+        <img src="Group 320.png" alt="Image 1"  id="spice5" data-aos="fade-right">
+        <div class="text-content" data-aos="fade-left">
             <p style="font-family: Inter;
             font-size: 30px;
             font-weight: 400;
             line-height: 40px;
             text-align: left;
-            ">JD Internationals is dedicated to providing spices that <br>inspire and elevate, making every meal a memorable <br> experience. <br> <br>
-            From traditional favorites to unique blends, our spices <br> are designed to meet the needs of both home cooks <br>and professional chefs. We focus on maintaining the <br> highest standards of quality and freshness, ensuring <br>that every product we offer contributes to exceptional <br> culinary creations.
+            ">JD Internationals is dedicated to providing spices that <br class="br">inspire and elevate, making every meal a memorable <br> experience. <br> <br>
+            From traditional favorites to unique blends, our spices <br class="br"> are designed to meet the needs of both home cooks <br class="br">and professional chefs. We focus on maintaining the <br class="br"> highest standards of quality and freshness, ensuring <br class="br">that every product we offer contributes to exceptional <br class="br"> culinary creations.
             </p>
         </div>
     </div>   
-<h1 id="text">JD INTERNATIONAL IS TO PROVIDE HIGH QUALITY , <br> BEST TASTE AND NATURAL PRODUCTS</h1>
+<h1 id="text" data-aos="zoom-in">JD INTERNATIONAL IS TO PROVIDE HIGH QUALITY , <br> BEST TASTE AND NATURAL PRODUCTS</h1>
 <div class="image-text-section" style="display: flex; align-items: center; margin-top: 50px;">
     <img src="cumin.jpg" alt="Descriptive Alt Text" style="width: 606px;
     height: auto;
     gap: 0px;
     border-radius: 20px;
     opacity: 0px;
-    ">
+    " data-aos="fade-right">
     <div class="text-content" style="width: 50%; padding: 20px;">
         <p style="font-family: Inter; font-size: 24px; font-weight: 400; line-height: 29.21px; text-align: left;">
             <ul style="font-family: Inter;
             font-size: 38px;
             font-weight: 300;
-            line-height: 46.25px;">
+            line-height: 46.25px;" data-aos="fade-left">
                 <li>Premium Quality</li>
                 <li>Sustainably Sourced</li>
                 <li>Traceable Supply Chain</li> 
@@ -575,19 +710,19 @@ margin-top: 30px;
     </div>
     
 </div>
-    <section id="range">  
+    <section id="range" data-aos="zoom-in">  
         <h1 style="font-family: Inter;
         font-size: 60px;
         font-weight: 400;
         line-height: 58.42px;
         text-align: center; 
         color: rgba(22, 73, 101, 1);
-        " >Our Range</h1> 
+        ">Our Range</h1> 
 <img src="spice4.jpeg" alt="Slide Image" id="spice1"> 
-</section>
-    <p id="About1">
+</section> 
+    <p id="About1" data-aos="zoom-in">
         JD Internationals stands at the intersection of real estate innovation and culinary excellence. As a versatile leader in <br> both sectors, we pride ourselves on our ability to deliver exceptional value and quality. Our real estate division <br> specializes in creating and managing high-impact residential, commercial, and industrial properties, driven by a <br>  commitment to excellence and client satisfaction. </p> 
-    <p id="About2">Simultaneously, our spices division offers a rich array of premium, sustainably sourced spices and blends that elevate <br> culinary experiences around the world. Whether you're seeking a transformative property or a distinctive flavor, JD <br> Internationals is dedicated to exceeding expectations and enhancing lives through our diverse portfolio.
+    <p id="About2" data-aos="zoom-in">Simultaneously, our spices division offers a rich array of premium, sustainably sourced spices and blends that elevate <br> culinary experiences around the world. Whether you're seeking a transformative property or a distinctive flavor, JD <br> Internationals is dedicated to exceeding expectations and enhancing lives through our diverse portfolio.
     </p> 
 </section>   
 <section id="instagram"></section>
@@ -596,8 +731,8 @@ margin-top: 30px;
     font-weight: 200;
     line-height: 58.42px;
     text-align: center; color: #164B67; margin-top: 20px;
-    ">Stay in touch on Instagram</h1> 
-  <div class="instagram-container" >
+    " data-aos="zoom-in">Stay in touch on Instagram</h1> 
+  <div class="instagram-container" data-aos="zoom-in">
     <!-- First Instagram Post Embed -->
     <div class="instagram-post">
         <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DAl5uaxPxSg/" data-instgrm-version="12" style="width: 100%;"></blockquote>
@@ -628,7 +763,44 @@ margin-top: 30px;
     </div>
  
 </div>
-</section>
+</section> 
+
+
+<footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <img src="combinedLogo.jpeg" alt="JD Realtors Logo" class="logo">
+        <h2>Let Us <br><strong>Connect!</strong></h2>
+        <div class="social-icons">
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+          <a href="#"><i class="fa fa-x"></i></a>
+          <a href="#"><i class="fa fa-envelope"></i></a>
+        </div>
+        <p><strong>Address</strong><br>Somnath Estate, Pali Rd, Unava,<br>Unjha - 384160</p>
+        <p><strong>Email:<br></strong> Jdrealtorsgroup@Gmail.Com</p>
+        <p><strong>Contact No:<br></strong> +91 9512803016</p>
+      </div>
+  
+      <div class="footer-right">
+        <div class="footer-links">
+          <h3 style="text-decoration: underline;">About Us</h3>
+          <a href="#">About JD Realtors</a>
+          <a href="#">Our Mission</a>
+          <a href="#">Our Vision</a>
+          <a href="#">Value We Provide</a>
+        </div>
+        <div class="footer-links">
+          <h3 style="text-decoration: underline;">Our Services</h3>
+          <a href="#" style="text-decoration: underline;">Our Technologies</a>
+          <a href="#" style="text-decoration: underline;">Industries</a>
+          <a href="#" style="text-decoration: underline;">Blogs</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p style="margin-left: 1px;">Copyright</p>
+    </div>
+  </footer>
 </body> 
 <script>
     function toggleMenu() {
@@ -638,5 +810,9 @@ margin-top: 30px;
 
 </script> 
 <script async src="https://www.instagram.com/embed.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
 
 </html>

@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet"> 
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>About Us</title>
   <style>
     *{
@@ -226,6 +227,88 @@ line-height: 77.89px;
 text-align: center; 
 color: #164B67;
 }
+footer {
+  background-color: #08485E;
+  color: #fff;
+  padding: 30px 10px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-evenly; /* Keep the left and right containers closer */
+  align-items: center; /* Vertically center the content */
+  flex-wrap: wrap;
+}
+
+.footer-left, .footer-right {
+  max-width: 40%; /* Keep them closer together */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content inside each container */
+}
+
+.footer-left {
+  text-align: center; /* Text centered for the left container */
+}
+
+.footer-left .logo {
+  width: 204px;
+height: 203px;
+gap: 0px;
+border-radius: 28px;
+opacity: 0px;
+margin-bottom: 20px;
+}
+
+.footer-left h2 {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.footer-left .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-left p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.footer-right {
+  align-items: flex-start; /* Ensure the content stays centered but text aligns left */
+  text-align: left; /* Left-align text for the right container */
+}
+
+.footer-right h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.footer-right a {
+  display: block;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  margin: 20px 0;
+}
+
+.footer-right a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  border-top: 1px solid #fff;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+}
 @media (max-width: 768px) {
 nav {
     justify-content: space-between; /* Maintain space between items */
@@ -263,7 +346,8 @@ nav a {
 }  
 #logo{
   margin-left: 0;
-}
+} 
+
 }
 /* Media query for tablets and smaller screens */
 @media only screen and (max-width: 768px) {
@@ -350,7 +434,41 @@ nav a {
     .same{
         font-size: 40px;
         line-height: 40px;
-    } 
+    }  
+    footer {
+    padding: 20px 5px; /* Reduce padding on smaller screens */
+  }
+
+  .footer-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align content */
+  }
+
+  .footer-left,
+  .footer-right {
+    max-width: 100%; /* Allow full width */
+    text-align: center; /* Center align text */
+    margin-bottom: 20px; /* Add space between sections */
+  }
+
+  .footer-left .logo {
+    width: 150px; /* Adjust logo size */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .footer-left h2 {
+    font-size: 20px; /* Reduce font size */
+  }
+
+  .footer-left p,
+  .footer-right h3,
+  .footer-right a {
+    font-size: 14px; /* Adjust font sizes */
+  }
+
+  .footer-right {
+    align-items: center; /* Center align items */
+  }
 
     }
 
@@ -374,7 +492,16 @@ nav a {
         .about-us-content p {
             font-size: 16px;
             line-height: 20px;
-        } 
+        }  
+        .footer-left h2 {
+    font-size: 18px; /* Further reduce font size */
+  }
+
+  .footer-left p,
+  .footer-right h3,
+  .footer-right a {
+    font-size: 12px; /* Further adjust font sizes */
+  }
 
 }
   </style>
@@ -422,7 +549,7 @@ nav a {
     </div> 
     <p id="tagline">"Where innovation and tradition collide: JD creates spaces and flavors <br> by fusing the richness of premium spices with real estate excellence."</p> 
 
-    <div class="about-us-card">
+    <div class="about-us-card" data-aos="zoom-in">
         <div class="about-us-content">
           <h2>About Us</h2>
           <p>
@@ -436,8 +563,8 @@ nav a {
     
       <h1 class="same">Personalized Services for Every Client</h1>
      <div class="service-card"> 
-        <img src="service6.jpg" alt="Service Image" class="service-image">
-        <div class="service-content">
+        <img src="service6.jpg" alt="Service Image" class="service-image" data-aos="fade-right">
+        <div class="service-content" data-aos="fade-left">
            <ul>
             <li>Expert Guidance from Start to Finish</li> 
             <li>Comprehensive Market Insights</li>
@@ -451,12 +578,12 @@ nav a {
      class="same">Local Expertise and Market Insights</h1>
   
   <div class="service-card-right">
-    <div class="service-text-left">
+    <div class="service-text-left" data-aos="fade-right">
         <p>
             With our in-depth knowledge <br> of Ahmedabad's real estate <br> market, we provide accurate, <br> up-to-date information on <br> property prices, market trends, <br> and investment opportunities.
         </p>
     </div>
-    <img src="service7.jpg" alt="Service Image" class="service-image-right">
+    <img src="service7.jpg" alt="Service Image" class="service-image-right" data-aos="fade-left">
 </div>
 <h1 style="font-family: Inter;
 font-size: 32px;
@@ -468,7 +595,7 @@ color: #164B67;
 ">“Transforming spaces into places you’ll love to live and work. Discover <br> your perfect property with JD Realtors.”</h1>
 
 <div class="about-us-card">
-    <div class="about-us-content">
+    <div class="about-us-content" data-aos="fade-right">
       <h2>Our Services</h2>
       <p id="same">
         With our in-depth knowledge of Ahmedabad's real estate market, we provide accurate, up-to-date information on property prices, market trends, and investment opportunities. Our close connections with local developers, builders, and landlords give us access to a diverse range of properties, ensuring we can find options that align with your preferences and budget.
@@ -479,6 +606,41 @@ color: #164B67;
     </div>
   </div>
        
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <img src="combinedLogo.jpeg" alt="JD Realtors Logo" class="logo">
+        <h2>Let Us <br><strong>Connect!</strong></h2>
+        <div class="social-icons">
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+          <a href="#"><i class="fa fa-x"></i></a>
+          <a href="#"><i class="fa fa-envelope"></i></a>
+        </div>
+        <p><strong>Address</strong><br>Somnath Estate, Pali Rd, Unava,<br>Unjha - 384160</p>
+        <p><strong>Email:<br></strong> Jdrealtorsgroup@Gmail.Com</p>
+        <p><strong>Contact No:<br></strong> +91 9512803016</p>
+      </div>
+  
+      <div class="footer-right">
+        <div class="footer-links">
+          <h3 style="text-decoration: underline;">About Us</h3>
+          <a href="#">About JD Realtors</a>
+          <a href="#">Our Mission</a>
+          <a href="#">Our Vision</a>
+          <a href="#">Value We Provide</a>
+        </div>
+        <div class="footer-links">
+          <h3 style="text-decoration: underline;">Our Services</h3>
+          <a href="#" style="text-decoration: underline;">Our Technologies</a>
+          <a href="#" style="text-decoration: underline;">Industries</a>
+          <a href="#" style="text-decoration: underline;">Blogs</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p style="margin-left: 1px;">Copyright</p>
+    </div>
+  </footer>
 
 </body> 
 <script>
@@ -487,5 +649,9 @@ color: #164B67;
   navLinks.classList.toggle('active'); // Toggle active class to show/hide links
 }
 
+</script> 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
 </script>
 </html>
