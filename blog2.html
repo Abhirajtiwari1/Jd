@@ -181,7 +181,7 @@
     <header>
         <div class="navbar-container">
             <nav>
-                <img src="spices.jpg" alt="Logo">
+                <img src="spices.jpg" alt="Logo" onclick="navigate()">
                 <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger menu icon -->
                 <div class="nav-links" id="navLinks" style="border-radius: 10px;
                 ;"> <!-- Container for nav links -->
@@ -304,5 +304,10 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init();
+</script> 
+<script>
+    function navigate(){
+        window.location.href = "spices.html"
+    }
 </script>
 </html>

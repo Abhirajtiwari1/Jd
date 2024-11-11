@@ -598,7 +598,7 @@ margin-bottom: 20px;
     <header>
         <div class="navbar-container">
             <nav>
-                <img src="logo.jpeg" alt="Logo" style="border-radius: 100%;">
+        <img src="logo.jpeg" alt="Logo" style="border-radius: 100%;" onclick="navigate()">
                 <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger menu icon -->
                 <div class="nav-links" id="navLinks" style="border-radius: 10px;
                 ;"> <!-- Container for nav links -->
@@ -755,5 +755,10 @@ margin-bottom: 20px;
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
 <script>
     AOS.init();
+  </script> 
+  <script>
+    function navigate(){
+        window.location.href = "index.html";
+    }
   </script>
 </html>

@@ -39,7 +39,15 @@ header {
         height: 170px;
         position: absolute;
         left: 20px; 
-    }
+    } 
+    /* Style for the logo link */
+#logo-link {
+    display: inline-block;
+    margin: 0; /* Remove any extra margin */
+    padding: 0; /* Remove any extra padding */
+    line-height: 0; /* Prevent any vertical spacing */
+}
+
     nav div {
         display: flex;
         gap: 100px;
@@ -511,36 +519,38 @@ nav a {
   </style>
 </head>
 <body> 
-    <header>
-        <div class="navbar-container">
-            <nav>
-                <img src="logo.jpeg" alt="Logo" style="border-radius: 100%;" id="logo">
-                <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger menu icon -->
-                <div class="nav-links" id="navLinks" style="border-radius: 10px;
-                ;"> <!-- Container for nav links -->
-                  
-                        <a href="#">About Us</a>
-                       
-                    <div class="dropdown">
-                        <a href="services.html">Our Services</a>
-                        <div class="dropdown-content" style="height: 400px;">
-                            <a href="#">Exclusive Access to Prime Properties</a>
-                            <hr style="width: 75px; margin-left: 10px;">
-                            <a href="#">Tailored Investment Opportunities</a>
-                            <hr style="width: 75px; margin-left: 10px;">
-                            <a href="#">Expert Negotiation for Maximum Value</a>
-                            <hr style="width: 75px; margin-left: 10px;">
-                            <a href="#">Personalised Recommendations Based on Your Needs</a>
-                            <hr style="width: 100px; margin-left: 10px;">
-                            <a href="#">Long-Term Support and Guidance</a>
-                        </div>
+  <header>
+    <div class="navbar-container">
+        <nav>
+            <!-- Wrap the logo in an anchor tag with target="_self" for same tab -->
+           
+                <img src="logo.jpeg" alt="Logo" style="border-radius: 100%;" id="logo" onclick="navigateToPage()">
+          
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger menu icon -->
+            <div class="nav-links" id="navLinks" style="border-radius: 10px;"> <!-- Container for nav links -->
+                <a href="#">About Us</a>
+
+                <div class="dropdown">
+                    <a href="services.html">Our Services</a>
+                    <div class="dropdown-content" style="height: 400px;">
+                        <a href="#">Exclusive Access to Prime Properties</a>
+                        <hr style="width: 75px; margin-left: 10px;">
+                        <a href="#">Tailored Investment Opportunities</a>
+                        <hr style="width: 75px; margin-left: 10px;">
+                        <a href="#">Expert Negotiation for Maximum Value</a>
+                        <hr style="width: 75px; margin-left: 10px;">
+                        <a href="#">Personalised Recommendations Based on Your Needs</a>
+                        <hr style="width: 100px; margin-left: 10px;">
+                        <a href="#">Long-Term Support and Guidance</a>
                     </div>
-                    <a href="blog1.html" target="_self">Blogs</a>
-                    <a href="./jd contactForm/public/index.html" target="_blank">Contact Us</a>
                 </div>
-            </nav>
-        </div>
-    </header>
+                
+                <a href="blog1.html" target="_self">Blogs</a>
+                <a href="./jd contactForm/public/index.html" target="_blank">Contact Us</a>
+            </div>
+        </nav>
+    </div>
+</header>
 
 
 
@@ -657,5 +667,11 @@ color: #164B67;
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init();
+</script> 
+<script>
+  function navigateToPage() {
+    window.location.href = 'slide2.html';
+}
+
 </script>
 </html>

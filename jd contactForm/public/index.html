@@ -328,7 +328,7 @@ nav a {
   <header>
     <div class="navbar-container">
         <nav>
-            <img src="combinedLogo.jpeg" alt="Logo">
+            <img src="combinedLogo.jpeg" alt="Logo" onclick="navigate()">
             <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger menu icon -->
             <div class="nav-links" id="navLinks" style="border-radius: 10px;
             ;"> <!-- Container for nav links -->
@@ -412,5 +412,10 @@ nav a {
   navLinks.classList.toggle('active'); // Toggle active class to show/hide links
 }
 
+</script> 
+<script>
+  function navigate(){
+    window.location.href = "../../index.html";
+  }
 </script>
 </html>
