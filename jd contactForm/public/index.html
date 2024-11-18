@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <link rel="icon" href="/logo.jpeg" type="image/jpeg">
+   <link rel="icon" href="/logo.jpeg" type="image/jpeg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -218,115 +218,135 @@ nav a {
 }
 /* Media Query for Mobile Devices */
 @media (max-width: 768px) {
+    /* General reset to avoid horizontal scrolling */
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+        zoom: 90%; /* Adjust zoom to fit content */
+    }
+
+    /* Ensure all elements respect the viewport width */
+    * {
+        box-sizing: border-box; /* Include padding and border in width calculations */
+        max-width: 100%; /* Prevent elements from exceeding viewport width */
+    }
+
+    /* Navigation */
     nav {
-        justify-content: space-between; /* Maintain space between items */
+        justify-content: space-between;
     }
 
     nav .menu-icon {
-        display: block; /* Show menu icon on mobile */
-        position: absolute; /* Absolute positioning for the icon */
-        right: 20px; /* Position on the right */
-        top: 20px; /* Center vertically */
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 10px;
     }
 
     nav .nav-links {
-        display: none; /* Hide nav links by default */
-        flex-direction: column; /* Stack links vertically */
-        position: absolute; /* Position links absolutely */
-        top: 71px; /* Position below navbar */
-        left: 0; /* Align to left */
-        right: 0; /* Stretch to the right */
-        background-color: #F2F2F2; /* Match background color */
-        padding: 10px 0; /* Add padding */
-        z-index: 1; /* Ensure it appears above other elements */
-        align-items: center; /* Center items horizontally */
-        gap: 5px; /* Reduced space between links */
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #F2F2F2;
+        padding: 5px 0;
+        z-index: 1;
+        align-items: center;
+        gap: 3px;
     }
 
     nav .nav-links.active {
-        display: flex; /* Show nav links when active */
-        justify-content: center; /* Center items when displayed */
+        display: flex;
+        justify-content: center;
     }
 
     nav a {
-        font-size: 14px; /* Adjust font size for mobile */
-        margin-bottom: 5px; /* Space between links */
-    } 
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr); /* Change to 2 columns on small screens */
+        font-size: 12px;
+        margin-bottom: 3px;
     }
-    
+
+    /* Grid container */
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
     .grid-container img {
-        width: 100%; /* Ensure images scale properly */
-        height: auto; /* Maintain aspect ratio */
-    } 
-    .instagram-title{
-        font-size: 30px;
-        line-height: 35px;
-    } 
-    #intro{
+        width: 100%;
+        height: auto;
+    }
+
+    /* Titles and text */
+    .instagram-title {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    #intro {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    #Choose {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    #tagline {
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+    }
+
+    #get {
         font-size: 20px;
         line-height: 25px;
-    } 
-    #Choose{
-        font-size: 25px;
-        line-height: 30px;
+        text-align: center;
+        margin-left: 0; /* Remove margin causing overflow */
     }
-    #tagline{
-      
-        font-size: 20px;
-     text-align: center;
-      
-        line-height: 30px;
-       
-     
-    } 
-    #get{
-      font-size: 30px;
-      line-height: 35px;
-      text-align: center; 
-      margin-left: 90px;
-    } 
+
+    /* Contact container */
     .contact-container {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-  }
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+    }
 
-  /* Adjust the map size for smaller screens */
-  .map iframe {
-    width: 100%;
-    height: 250px;
-    margin-left: 50px;  
-  }
+    /* Map */
+    .map iframe {
+        width: 90%;
+        height: 200px;
+        margin-left: auto; /* Center map */
+        margin-right: auto;
+    }
 
-  /* Adjust the form width and remove margins */
-  .contact-form {
-    width: 100%;
-    margin-right: 0;
-    height: auto; 
-    margin-left: 100px;
-  }
+    /* Contact form */
+    .contact-form {
+        width: 90%; /* Fit within viewport */
+        height: auto;
+        margin: 0 auto;
+    }
 
-  /* Center the button and adjust width */
-  .contact-form button {
-    width: 100%;
-    margin-right: 0;
-  }
+    .contact-form button {
+        width: 100%;
+        margin: 10px 0;
+    }
 
-  /* Adjust font sizes for smaller screens */
-  .contact-form label,
-  .contact-form input,
-  .contact-form textarea {
-    font-size: 14px; 
-  }
+    .contact-form label,
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 12px;
+    }
 
-  /* Reduce form padding */
-  .contact-form input,
-  .contact-form textarea {
-    padding: 10px;
-  }
+    .contact-form input,
+    .contact-form textarea {
+        padding: 8px;
+    }
 }
+
 
 </style>
 <body> 
