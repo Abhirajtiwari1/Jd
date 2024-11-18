@@ -170,7 +170,7 @@ text-align: left;
   display: block;
 }
 header {
-  background-color: #F2F2F2;
+  /* background-color: #F2F2F2; */
   padding: 30px 50px; 
   width: 100%;
 }
@@ -188,21 +188,24 @@ nav {
   height: 100%;
 }
 nav img {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   position: absolute;
   left: 20px; 
-  border-radius: 100%;
+ margin-top: 20px;
+border: 2px solid black;
 }
 nav div {
   display: flex;
-  gap: 100px;
+  gap: 200px;
   margin: auto;
 }
 nav a { 
   text-decoration: none;
   color: #164B67;
-  font-size: 16px;
+  font-size: 16px; 
+
+ 
 }
 #get{
   text-align: center;
@@ -278,10 +281,10 @@ nav a {
      
     } 
     #get{
-      font-size: 40px;
+      font-size: 30px;
       line-height: 35px;
       text-align: center; 
-      margin-left: 50px;
+      margin-left: 90px;
     } 
     .contact-container {
     flex-direction: column;
@@ -293,14 +296,15 @@ nav a {
   .map iframe {
     width: 100%;
     height: 250px;
-    margin-left: 0;
+    margin-left: 50px;  
   }
 
   /* Adjust the form width and remove margins */
   .contact-form {
     width: 100%;
     margin-right: 0;
-    height: auto;
+    height: auto; 
+    margin-left: 100px;
   }
 
   /* Center the button and adjust width */
@@ -313,13 +317,13 @@ nav a {
   .contact-form label,
   .contact-form input,
   .contact-form textarea {
-    font-size: 14px;
+    font-size: 14px; 
   }
 
   /* Reduce form padding */
   .contact-form input,
   .contact-form textarea {
-    padding: 8px;
+    padding: 10px;
   }
 }
 
@@ -328,7 +332,7 @@ nav a {
   <header>
     <div class="navbar-container">
         <nav>
-            <img src="combinedLogo.jpeg" alt="Logo" onclick="navigate()">
+            <img src="practice.jpg" alt="Logo" onclick="navigate()">
             <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger menu icon -->
             <div class="nav-links" id="navLinks" style="border-radius: 10px;
             ;"> <!-- Container for nav links -->
