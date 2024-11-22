@@ -30,7 +30,7 @@
 }
         header {
             background-color: #F2F2F2;
-            padding: 30px 50px;
+            padding: 55px 50px;
         }
         .navbar-container {
             width: 100%;
@@ -46,20 +46,29 @@
             height: 100%;
         }
         nav img {
-            width: 129px;
-            height: 140px;
+            width: 170px;
+            height: 170px;
             position: absolute;
-            left: 20px;
+            left: 1px;
+        } 
+        nav img:hover{
+            cursor: pointer;
         }
         nav div {
             display: flex;
-            gap: 100px;
+            gap: 211px;
             margin: auto;
         }
         nav a { 
             text-decoration: none;
             color: #164B67;
-            font-size: 16px;
+            font-size: 20px;
+            font-weight: 500;   
+            margin-right: 0px; 
+            padding: 5px 0px; 
+        } 
+        #AboutUs{
+            margin-left: 200px;
         }
         .dropdown {
             position: relative;
@@ -276,7 +285,8 @@ nav .menu-icon {
     display: none; /* Hide menu icon on desktop */
     font-size: 24px; /* Icon size */
     cursor: pointer; /* Pointer cursor on hover */
-}
+} 
+
 #instagram{
     margin: 0;
             padding: 0;
@@ -394,6 +404,10 @@ margin-bottom: 20px;
 .footer-bottom p {
   font-size: 14px;
 }
+#email-link {
+        color: white; /* Set link color to white */
+        text-decoration: none; /* Remove underline (optional) */
+    }
 
 
 
@@ -401,7 +415,7 @@ margin-bottom: 20px;
     @media (max-width: 768px) { 
        
         header {
-            padding: 20px;
+            padding: 45px;
         }
 
         nav {
@@ -411,7 +425,7 @@ margin-bottom: 20px;
     nav .menu-icon {
         display: block; /* Show menu icon on mobile */
         position: absolute; /* Absolute positioning for the icon */
-        right: 20px; /* Position on the right */
+        right: 1px; /* Position on the right */
         top: 20px; /* Center vertically */
     }
 
@@ -439,7 +453,9 @@ margin-bottom: 20px;
         margin-bottom: 5px; /* Space between links */
     }
 
-        
+        #AboutUs{
+            margin-left: 0;
+        }
 
         
 
@@ -538,8 +554,9 @@ margin-bottom: 20px;
                 margin-top: 5px; /* Reduce margin on mobile */
             } 
             nav img{
-                height: 120px;
-                width: 120px;
+                height: 155px;
+                width: 155px; 
+                margin-left: 21px;
             }
         #info br {
             display: none;
@@ -624,12 +641,12 @@ margin-bottom: 20px;
     <header style="width: 100%;">
         <div class="navbar-container">
             <nav>
-                <img src="spices.jpg" alt="Logo" style="border-radius: 100%;" onclick="navigate()">
+                <img src="spices.jpg" alt="Logo" style="border-radius: 100%;" onclick="navigate()" >
                 <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger menu icon -->
                 <div class="nav-links" id="navLinks" style="border-radius: 10px;
                 ;"> <!-- Container for nav links -->
                
-                        <a href="aboutSpices.html">About Us</a>
+                        <a href="aboutSpices.html" id="AboutUs">About Us</a>
                      
                     <div class="dropdown"> 
                         <a href="#">Our Products</a>
@@ -778,7 +795,7 @@ margin-bottom: 20px;
           <a href="#"><i class="fa fa-envelope"></i></a>
         </div>
         <p><strong>Address</strong><br>Somnath Estate, Pali Rd, Unava,<br>Unjha - 384160</p>
-        <p><strong>Email:<br></strong> info@jdinternational.co.in</p>
+        <p><strong>Email:<br></strong> <a href="mailto:Jdrealtorsgroup@gmail.com" id="email-link">Jdrealtorsgroup@gmail.com</a></p>
         <p><strong>Contact No:<br></strong> +91 9512803016</p>
       </div>
   

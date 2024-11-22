@@ -33,6 +33,9 @@ body {
   width: auto;                  /* Maintain aspect ratio */
   height: 100px;                /* Increase height for better visibility */
 }
+header{
+  padding: 55px 50px;
+}
 
 .container {
   display: flex;
@@ -192,19 +195,25 @@ nav img {
   width: 100px;
   height: 100px;
   position: absolute;
-  left: 20px; 
- margin-top: 20px;
-border: 2px solid black;
+  left: 20px;
+  margin-top: 20px;
+  border: 2px solid black;
+}
+nav img:hover{
+  cursor: pointer;
 }
 nav div {
   display: flex;
-  gap: 200px;
+  gap: 211px;
   margin: auto;
 }
 nav a { 
   text-decoration: none;
-  color: #164B67;
-  font-size: 16px; 
+            color: #164B67;
+            font-size: 20px;
+            font-weight: 500;   
+            margin-right: 0px; 
+            padding: 5px 0px; 
 
  
 }
@@ -215,7 +224,7 @@ nav a {
  nav .menu-icon{
   display: none;
  
-}
+} 
 /* Media Query for Mobile Devices */
 @media (max-width: 768px) {
     /* General reset to avoid horizontal scrolling */
@@ -266,8 +275,11 @@ nav a {
     nav a {
         font-size: 12px;
         margin-bottom: 3px;
+    } 
+    #logo1{
+      margin-left: 50px;
     }
-
+     
     /* Grid container */
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
@@ -344,8 +356,10 @@ nav a {
     .contact-form input,
     .contact-form textarea {
         padding: 8px;
-    }
+    } 
+
 }
+
 
 
 </style>
@@ -353,7 +367,7 @@ nav a {
   <header>
     <div class="navbar-container">
         <nav>
-            <img src="practice.jpg" alt="Logo" onclick="navigate()">
+            <img src="practice.jpg" alt="Logo" onclick="navigate()" id="logo1">
             <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger menu icon -->
             <div class="nav-links" id="navLinks" style="border-radius: 10px;
             ;"> <!-- Container for nav links -->

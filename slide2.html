@@ -21,7 +21,7 @@
         }
         header {
             background-color: #F2F2F2;
-            padding: 30px 50px;
+            padding: 55px 50px;
         }
         .navbar-container {
             width: 100%;
@@ -37,22 +37,34 @@
             height: 100%;
         }
         nav img {
-           width: 150px;
-            height: 170px;
+           width: 200px;
+            height: 190px;
             position: absolute;
-            left: 20px; 
+            left: 1px;  
          
+        }
+        nav img:hover{
+            cursor: pointer;
         }
         nav div {
             display: flex;
-            gap: 100px;
+            gap: 211px;
             margin: auto;
-        }
+        } 
+
         nav a { 
             text-decoration: none;
             color: #164B67;
-            font-size: 16px;
+            font-size: 20px;
+            font-weight: 500;   
+            margin-right: 0px; 
+            padding: 5px 0px; 
+            
         }
+       #AboutUs{
+        margin-left: 200px;
+       }
+ 
         #About div {
             width: 100%;
             height: auto;
@@ -303,7 +315,9 @@ text-align: left;
             border: 1px solid black;
             opacity: 0px;
         } 
-
+#start-btn:hover{
+    cursor: pointer;
+}
         .info-card {
             display: flex;
             flex-direction: row;
@@ -421,7 +435,12 @@ margin-bottom: 20px;
   font-size: 14px;
 }
 
+#email-link {
+        color: white; /* Set link color to white */
+        text-decoration: none; /* Remove underline (optional) */
+    }
 
+    
 
 /* Media Query for Mobile Devices */
 /* Media Query for Mobile Devices */
@@ -433,10 +452,16 @@ margin-bottom: 20px;
     nav .menu-icon {
         display: block; /* Show menu icon on mobile */
         position: absolute; /* Absolute positioning for the icon */
-        right: 20px; /* Position on the right */
-        top: 20px; /* Center vertically */
+        right: 0px; /* Position on the right */
+        top: 30px; /* Position towards the top */
+        margin-right: 0;/* Center vertically */ 
+       left: 55px;
     }
-
+    #logo{
+        height: 175px;
+        width: 175px;
+        margin-left: 15px;
+    }
     nav .nav-links {
         display: none; /* Hide nav links by default */
         flex-direction: column; /* Stack links vertically */
@@ -459,7 +484,10 @@ margin-bottom: 20px;
     nav a {
         font-size: 14px; /* Adjust font size for mobile */
         margin-bottom: 5px; /* Space between links */
-    } 
+    }  
+    #AboutUs{
+        margin-left: 0;
+    }
     .grid-container {
         grid-template-columns: repeat(2, 1fr); /* Change to 2 columns on small screens */
     }
@@ -598,12 +626,12 @@ margin-bottom: 20px;
     <header>
         <div class="navbar-container">
             <nav>
-        <img src="logo.jpeg" alt="Logo" style="border-radius: 100%;" onclick="navigate()">
+        <img src="logo.jpeg" alt="Logo" style="border-radius: 100%;" onclick="navigate()" id="logo">
                 <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger menu icon -->
                 <div class="nav-links" id="navLinks" style="border-radius: 10px;
                 ;"> <!-- Container for nav links -->
                     
-                        <a href="aboutUs.html">About Us</a>
+                        <a href="aboutUs.html" id="AboutUs">About Us</a>
                        
             
                     <div class="dropdown">
@@ -714,7 +742,7 @@ margin-bottom: 20px;
           <a href="#"><i class="fa fa-envelope"></i></a>
         </div>
         <p><strong>Address</strong><br>Somnath Estate, Pali Rd, Unava,<br>Unjha - 384160</p>
-        <p><strong>Email:<br></strong> Jdrealtorsgroup@Gmail.Com</p>
+        <p><strong>Email:<br></strong> <a href="mailto:Jdrealtorsgroup@gmail.com" id="email-link">Jdrealtorsgroup@gmail.com</a></p>
         <p><strong>Contact No:<br></strong> +91 9512803016</p>
       </div>
   
