@@ -57,7 +57,9 @@ html, body {
             margin-right: 0px; 
             padding: 5px 0px; 
         }
-        
+        #AboutUs{
+          margin-left: 100px;
+        }
         .dropdown {
             position: relative;
             display: inline-block;
@@ -354,7 +356,7 @@ margin-bottom: 20px;
 
 @media (max-width: 768px) { 
   header {
-    padding: 20px;
+    padding: 30px;
   }
 
   nav {
@@ -368,15 +370,15 @@ margin-bottom: 20px;
     top: 20px; /* Center vertically */
   }
 nav img{
-  height: 130px;
-  width: 130px; 
-  margin-left: 30px;
+  height: 150px;
+  width: 150px; 
+  margin-left: 45px;
 }
   nav .nav-links {
     display: none; /* Hide nav links by default */
     flex-direction: column; /* Stack links vertically */
     position: absolute; /* Position links absolutely */
-    top: 71px; /* Position below navbar */
+    top: 71px; /* Position below navbar 
     left: 0; /* Align to left */
     right: 0; /* Stretch to the right */
     background-color: #F2F2F2; /* Match background color */
@@ -395,6 +397,7 @@ nav img{
     font-size: 14px; /* Adjust font size for mobile */
     margin-bottom: 5px; /* Space between links */
   } 
+ 
 
   .card {
     flex-direction: column;
@@ -522,7 +525,11 @@ nav img{
 
   .footer-right {
     align-items: center; /* Center align items */
-  } 
+  }  
+  
+  #AboutUs{
+    margin-left: 0px;
+  }
 
 } 
 @media (max-width: 480px) {
@@ -534,7 +541,8 @@ nav img{
   .footer-right h3,
   .footer-right a {
     font-size: 12px; /* Further adjust font sizes */
-  }
+  } 
+  
 }
 
 </style> 
@@ -547,7 +555,7 @@ nav img{
                 <div class="nav-links" id="navLinks" style="border-radius: 10px;
                 ;"> <!-- Container for nav links -->
                 
-                        <a href="#" style="margin-left: 200px;">About Us</a>
+                        <a href="#" id="AboutUs">About Us</a>
                     
                     <div class="dropdown">
                         <a href="#">Our Services</a>
@@ -579,7 +587,7 @@ nav img{
         <div class="about-us-content" data-aos="fade-right">
           <h2>About Us</h2>
           <p>
-            JD REALTORS, a proud venture of the JD Group of Companies, is a leading real estate agency in Ahmedabad. With years of expertise and a dedicated team of professionals, we specialise in helping clients buy, sell, and rent properties across this dynamic city.JD Relators is an expert in residential, commercial, and industrial properties, with a deep grasp of the real estate industry. They provide customised solutions to satisfy the wide range of customer needs.
+            JD International, spices manufacturer and exporter of premium spices, with a focus on quality and authenticity. Based in Unjha, the heartland of India’s spice industry, and with operations headquartered in Ahmedabad, we specialise in bringing the finest spices from India to kitchens and culinary professionals around the globe.
           </p>
         </div>
         <div class="about-us-image" data-aos="fade-left">

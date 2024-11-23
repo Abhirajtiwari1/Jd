@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+   <link rel="icon" href="/logo.jpeg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <title>Contact Form</title>
+</head> 
+<style>
+  /* General Styling */
+body {
+  font-family: 'Inter', Courier, monospace;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #f9f9f9;
+  position: relative; /* Allows for positioning of child elements */
+} 
+
+
+.logo-container {
+  text-align: center; /* Centers the logo within the container */
+  margin-top: 20px; /* Adjusts the space above the logo */
+}
+
+.logo {
+  display: block;                /* Makes the logo behave as a block element */
+  margin: 0 auto;               /* Centers the logo horizontally */
+  border-radius: 0 0 100px 100px; /* Creates the semi-circle effect */
+  width: auto;                  /* Maintain aspect ratio */
+  height: 100px;                /* Increase height for better visibility */
+}
+header{
+  padding: 55px 50px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around; /* Distributes space evenly */
+  align-items: center;
+  padding: 5px;
+  margin-top: 20px; /* Ensure space below the logo */
+}
+
+
+.first {
+  background-color: antiquewhite;
+  height: 35px;
+  width: 150px; /* Increased width */
+  text-align: center;
+  border-radius: 10px;
+  line-height: 35px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  white-space: nowrap; /* Prevents text wrapping */
+  padding: 0 5px; /* Optional: Add padding for extra space */
+  transition: background-color 0.3s;
+}
+
+.first:hover {
+  background-color: #d4c2a8;
+  cursor: pointer;
+}
+
+
+/* Contact Section */
+
+
+.contact-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #5c524a;
+}
+
+.contact-section h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 20px; 
+  
+}
+
+ .map iframe {
+  height: 350px;
+  width: 400px;
+  margin-left: 200px;
+} 
+
+/* Contact Form Styling */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 400px;
+  height: 450px; 
+  margin-right: 200px; 
+}
+
+.contact-form label {
+  font-size: 16px;
+  color: #164B67;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f4f4f4;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  background-color: #164B67;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin: 0 auto; /* Centers the button */
+  display: block; /* Ensures the button behaves as a block-level element */
+  margin-right: 50%; 
+  width: 200px;
+}
+
+.contact-form button:hover {
+  background-color: #3e372e;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #14A0D2;
+
+
+  z-index: 1; 
+  border-radius: 12px; 
+  width: 217px;
+  height: 300px;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px;
+  text-decoration: none;
+  display: block; 
+  font-family: Inter;
+font-size: 16px;
+font-weight: 400;
+line-height: 19.36px;
+text-align: left;
+
+}
+
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+header {
+  /* background-color: #F2F2F2; */
+  padding: 30px 50px; 
+  width: 100%;
+}
+.navbar-container {
+  width: 100%;
+  height: 71px;
+  position: relative;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+nav img {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 20px;
+  margin-top: 20px;
+  border: 2px solid black;
+}
+nav img:hover{
+  cursor: pointer;
+}
+nav div {
+  display: flex;
+  gap: 211px;
+  margin: auto;
+}
+nav a { 
+  text-decoration: none;
+            color: #164B67;
+            font-size: 20px;
+            font-weight: 500;   
+            margin-right: 0px; 
+            padding: 5px 0px; 
+
+ 
+}
+#get{
+  text-align: center;
+  color: #164B67;
+} 
+ nav .menu-icon{
+  display: none;
+ 
+} 
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    /* General reset to avoid horizontal scrolling */
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+        zoom: 90%; /* Adjust zoom to fit content */
+    }
+
+    /* Ensure all elements respect the viewport width */
+    * {
+        box-sizing: border-box; /* Include padding and border in width calculations */
+        max-width: 100%; /* Prevent elements from exceeding viewport width */
+    }
+
+    /* Navigation */
+    nav {
+        justify-content: space-between;
+    }
+
+    nav .menu-icon {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+
+    nav .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #F2F2F2;
+        padding: 5px 0;
+        z-index: 1;
+        align-items: center;
+        gap: 3px;
+    }
+
+    nav .nav-links.active {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 12px;
+        margin-bottom: 3px;
+    } 
+    #logo1{
+      margin-left: 50px;
+    }
+     
+    /* Grid container */
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .grid-container img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Titles and text */
+    .instagram-title {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    #intro {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    #Choose {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    #tagline {
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+    }
+
+    #get {
+        font-size: 20px;
+        line-height: 25px;
+        text-align: center;
+        margin-left: 0; /* Remove margin causing overflow */
+    }
+
+    /* Contact container */
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+    }
+
+    /* Map */
+    .map iframe {
+        width: 90%;
+        height: 200px;
+        margin-left: auto; /* Center map */
+        margin-right: auto;
+    }
+
+    /* Contact form */
+    .contact-form {
+        width: 90%; /* Fit within viewport */
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .contact-form button {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .contact-form label,
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 12px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 8px;
+    } 
+
+}
+
+
+
+</style>
+<body> 
+  <header>
+    <div class="navbar-container">
+        <nav>
+            <img src="practice.jpg" alt="Logo" onclick="navigate()" id="logo1">
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger menu icon -->
+            <div class="nav-links" id="navLinks" style="border-radius: 10px;
+            ;"> <!-- Container for nav links -->
+                <div class="dropdown">
+                    <a href="#">About Us</a>
+                    <div class="dropdown-content" style="height: 400px;">
+                        <a href="#">Our Purpose</a>
+                        <hr style="width: 75px; margin-left: 10px;">
+                        <a href="#">Our Values</a>
+                        <hr style="width: 75px; margin-left: 10px;">
+                        <a href="#">What we do</a>
+                        <hr style="width: 75px; margin-left: 10px;">
+                        <a href="#">Why Choose us?</a>
+                        <hr style="width: 100px; margin-left: 10px;">
+                        <a href="#">Contract Manufacturing</a>
+                        <hr style="width: 100px; margin-left: 10px;">
+                        <a href="#">Board of Director</a>
+                        <hr style="width: 100px; margin-left: 10px;">
+                        <a href="#">Join Our Team</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#">Our Services</a>
+                    <div class="dropdown-content">
+                        <a href="#">Residential Real Estate</a>
+                        <hr style="width: 75px; margin-left: 10px;">
+                        <a href="#">Our Values</a>
+                        <hr style="width: 75px; margin-left: 10px;">
+                        <a href="#">Commercial Real Estate</a>
+                        <hr style="width: 75px; margin-left: 10px;">
+                        <a href="#">Real Estate Development</a>
+                        <hr style="width: 100px; margin-left: 10px;">
+                        <a href="#">Consulting Services</a>
+                    </div>
+                </div>
+                <a href="#">Blogs</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+
+  <!-- Main Section -->
+  <section class="contact-section">
+    <h2 id="get">GET IN TOUCH WITH US</h2>
+
+    
+    <div class="contact-container">
+      <!-- Embedded Map -->
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.663583611847!2d72.574383!3d23.019525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84ee8fffd999%3A0x98ae99eb021542bc!2sArtcatera%20Design%20Studio!5e0!3m2!1sen!2sin!4v1640940399585!5m2!1sen!2sin"
+          width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+
+      <!-- Contact Form -->
+      <form class="contact-form" action="http://localhost:3000/submit-contact" method="post">
+        <label for="name" style="text-decoration: underline;">Your name</label>
+        <input type="text" id="name" name="name" required>
+      
+        <label for="email" style="text-decoration: underline;">Your email</label>
+        <input type="email" id="email" name="email" required>
+      
+        <label for="subject" style="text-decoration: underline;">Subject</label>
+        <input type="text" id="subject" name="subject" required>
+      
+        <label for="message" style="text-decoration: underline;">Comment</label>
+        <textarea id="message" name="message"></textarea>
+      
+        <button type="submit">Submit</button>
+      </form>
+      
+    </div>
+  </section>
+
+</body>
+<script>
+  function toggleMenu() {
+  const navLinks = document.getElementById('navLinks');
+  navLinks.classList.toggle('active'); // Toggle active class to show/hide links
+}
+
+</script> 
+<script>
+  function navigate(){
+    window.location.href = "../../index.html";
+  }
+</script>
+</html>
